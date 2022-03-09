@@ -1,7 +1,7 @@
 import 'package:bottom_nav_ui/ui/favourite.dart';
 import 'package:bottom_nav_ui/ui/home.dart';
 import 'package:bottom_nav_ui/ui/image_scanner.dart';
-import 'package:bottom_nav_ui/ui/person.dart';
+import 'package:bottom_nav_ui/ui/plant.dart';
 import 'package:bottom_nav_ui/ui/settings.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ class Landing extends StatefulWidget {
 
 class _HomeState extends State<Landing> {
   int index = 0;
-  final screens = [Home(), Favourite(), ImageScanner(), Person(), Settings()];
+  final screens = [Home(), Favourite(), ImageScanner(), Plant(), Settings()];
   @override
   Widget build(BuildContext context) {
     final items = <Widget>[

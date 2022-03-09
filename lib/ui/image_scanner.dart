@@ -73,41 +73,49 @@ class _ImageScannerState extends State<ImageScanner> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(children: [
-          MaterialButton(
-            color: Colors.blueAccent,
-            child: Text(
-              "Pick from image gallery",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white70),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
+        )),
+        child: Center(
+          child: Column(children: [
+            MaterialButton(
+              color: Colors.blueAccent,
+              child: Text(
+                "Pick from image gallery",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.white70),
+              ),
+              onPressed: () {
+                pickImage();
+              },
             ),
-            onPressed: () {
-              pickImage();
-            },
-          ),
-          MaterialButton(
-            color: Colors.blueAccent,
-            child: Text(
-              "Pick from camera",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white70),
+            MaterialButton(
+              color: Colors.blueAccent,
+              child: Text(
+                "Pick from camera",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.white70),
+              ),
+              onPressed: () {
+                pickImageCamera();
+              },
             ),
-            onPressed: () {
-              pickImageCamera();
-            },
-          ),
-          _image != null
-              ? SizedBox(
-                  height: 300,
-                  width: 300,
-                  child: Image.file(
-                    _image!,
-                    fit: BoxFit.cover,
-                  ),
-                )
-              : const Center(child: Text("No image selected"))
-        ]),
+            _image != null
+                ? SizedBox(
+                    height: 300,
+                    width: 300,
+                    child: Image.file(
+                      _image!,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : const Center(child: Text("No image selected"))
+          ]),
+        ),
       ),
     );
   }
