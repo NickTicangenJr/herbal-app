@@ -32,9 +32,17 @@ class _LandingState extends State<Landing> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
+        flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
+        ))),
+        toolbarHeight: 70,
         backgroundColor: Color.fromARGB(255, 56, 160, 153),
         title: Text("Herbal Identifier"),
-        elevation: 0,
+        elevation: 10,
         centerTitle: true,
       ),
       body: screens[index],

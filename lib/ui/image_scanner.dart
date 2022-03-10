@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+
+import 'package:community_material_icon/community_material_icon.dart';
 // import 'package:tflite/tflite.dart';
 
 class ImageScanner extends StatefulWidget {
@@ -74,47 +76,77 @@ class _ImageScannerState extends State<ImageScanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
-        )),
-        child: Center(
-          child: Column(children: [
-            MaterialButton(
-              color: Colors.blueAccent,
-              child: Text(
-                "Pick from image gallery",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.white70),
-              ),
-              onPressed: () {
-                pickImage();
-              },
-            ),
-            MaterialButton(
-              color: Colors.blueAccent,
-              child: Text(
-                "Pick from camera",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.white70),
-              ),
-              onPressed: () {
-                pickImageCamera();
-              },
-            ),
-            _image != null
-                ? SizedBox(
-                    height: 300,
-                    width: 300,
-                    child: Image.file(
-                      _image!,
-                      fit: BoxFit.cover,
+        color: Color(0xFFF9F8FD),
+        // decoration: BoxDecoration(
+        //     gradient: LinearGradient(
+        //   begin: Alignment.topRight,
+        //   end: Alignment.bottomLeft,
+        //   colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
+        // )),
+        child: Container(
+          margin: EdgeInsets.all(20),
+          child: Center(
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  MaterialButton(
+                    color: Colors.blueAccent,
+                    child: Row(
+                      children: [
+                        Icon(
+                          CommunityMaterialIcons.image_outline,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Album",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
                     ),
-                  )
-                : const Center(child: Text("No image selected"))
-          ]),
+                    onPressed: () {
+                      pickImage();
+                    },
+                  ),
+                  MaterialButton(
+                    color: Colors.blueAccent,
+                    child: Row(
+                      children: [
+                        Icon(
+                          CommunityMaterialIcons.camera_plus_outline,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Camera",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                    onPressed: () {
+                      pickImageCamera();
+                    },
+                  ),
+                ],
+              ),
+              _image != null
+                  ? SizedBox(
+                      height: 300,
+                      width: 300,
+                      child: Card(
+                        child: Image.file(
+                          _image!,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  : SizedBox(
+                      height: 300,
+                      width: 300,
+                      child: Image.asset('assets/images/toa.jpg'))
+            ]),
+          ),
         ),
       ),
     );
