@@ -14,10 +14,10 @@ void main() => runApp(new MaterialApp(
 
 class Landing extends StatefulWidget {
   @override
-  State<Landing> createState() => _HomeState();
+  State<Landing> createState() => _LandingState();
 }
 
-class _HomeState extends State<Landing> {
+class _LandingState extends State<Landing> {
   int index = 0;
   final screens = [Home(), Favourite(), ImageScanner(), Plant(), Settings()];
   @override
