@@ -37,6 +37,7 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   community_material_icon: ^5.9.55
   image_picker: ^0.8.4+10
+  flutter_native_splash:
   # tflite: ^1.1.2
 
 dev_dependencies:
