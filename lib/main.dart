@@ -34,26 +34,41 @@ class _LandingState extends State<Landing> {
       appBar: AppBar(
         flexibleSpace: Container(
             decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(28),
+                    bottomRight: Radius.circular(28)),
                 gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
-        ))),
-        toolbarHeight: 70,
-        backgroundColor: Color.fromARGB(255, 56, 160, 153),
-        title: Text("Herbal Identifier"),
-        elevation: 10,
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xff5FFBF1),
+                    Color(0xff86A8E7),
+                    Color(0xffD16BA5)
+                  ],
+                ))),
+        toolbarHeight: 80,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "Herbal Identifier",
+          style: TextStyle(fontSize: 33),
+        ),
+        elevation: 0.0,
         centerTitle: true,
       ),
       body: screens[index],
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent,
-        items: items,
-        height: 60,
-        animationDuration: Duration(milliseconds: 300),
-        index: index,
-        onTap: (index) => setState(
-          () => this.index = index,
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+            iconTheme: IconThemeData(color: Color.fromARGB(255, 92, 92, 92))),
+        child: CurvedNavigationBar(
+          backgroundColor: Colors.transparent,
+          buttonBackgroundColor: Color(0xff5FFBF1),
+          items: items,
+          height: 65,
+          animationDuration: Duration(milliseconds: 300),
+          index: index,
+          onTap: (index) => setState(
+            () => this.index = index,
+          ),
         ),
       ),
     );

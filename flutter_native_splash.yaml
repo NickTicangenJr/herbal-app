@@ -2,6 +2,6 @@ flutter_native_splash:
   image: assets/icons/final_logo.png
   android: true
   ios: false
-  color: "00867d"
+  color: "86A8E7"
   fullscreen: true
   android_gravity: center

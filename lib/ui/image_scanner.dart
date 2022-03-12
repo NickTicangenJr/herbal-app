@@ -84,7 +84,7 @@ class _ImageScannerState extends State<ImageScanner> {
         //   colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
         // )),
         child: Container(
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.all(30),
           child: Center(
             child: Column(children: [
               Row(
