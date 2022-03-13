@@ -75,64 +75,6 @@ class _ImageScannerState extends State<ImageScanner> {
     detectimage(file!);
   }
 
-  // File? _image;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   loadModelFiles();
-  //   _loading = true;
-  // }
-
-  // Future pickImage() async {
-  //   try {
-  //     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-
-  //     if (image == null) return;
-  //     final imageTemp = File(image.path);
-  //     setState(() => this._image = imageTemp);
-  //   } on PlatformException catch (e) {
-  //     print("Failed to pick image: $e");
-  //   }
-  // }
-
-  // Future pickImageCamera() async {
-  //   try {
-  //     final image = await ImagePicker().pickImage(source: ImageSource.camera);
-
-  //     if (image == null) return;
-  //     final imageTemp = File(image.path);
-  //     setState(() => this._image = imageTemp);
-  //   } on PlatformException catch (e) {
-  //     print("Failed to pick image: $e");
-  //   }
-  // }
-
-  //TODO load model files
-  // loadModelFiles() async {
-  //   String res = await Tflite.loadModel(
-  //       model: "assets/model_unquant.tflite",
-  //       labels: "assets/labels.txt",
-  //       numThreads: 1, // defaults to 1
-  //       isAsset:
-  //           true, // defaults to true, set to false to load resources outside assets
-  //       useGpuDelegate:
-  //           false // defaults to false, set to true to use GPU delegate
-  //       );
-  // }
-
-  //TODO perform image recognition with images
-//   startImageRecognition() async {
-//     var recognitions = await Tflite.runModelOnImage(
-//   path: image.path,   // required
-//   imageMean: 0.0,   // defaults to 117.0
-//   imageStd: 255.0,  // defaults to 1.0
-//   numResults: 2,    // defaults to 5
-//   threshold: 0.2,   // defaults to 0.1
-//   asynch: true      // defaults to true
-// );
-//   }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -140,54 +82,85 @@ class _ImageScannerState extends State<ImageScanner> {
         child: Column(
           children: [
             loading == true
-                ? Container()
+                ? Container(
+                    height: 350,
+                    width: 350,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    margin: EdgeInsets.only(top: 30),
+                  )
                 : Container(
-                    color: Colors.red,
+                    margin: EdgeInsets.only(top: 30),
+                    color: Color.fromARGB(255, 255, 255, 255),
+
+                    // decoration: BoxDecoration(
+                    //   borderRadius: BorderRadius.circular(10),
+                    //   // boxShadow: [
+                    //   //   BoxShadow(
+                    //   //     color: Colors.grey.withOpacity(0.5),
+                    //   //     spreadRadius: 5,
+                    //   //     blurRadius: 7,
+                    //   //     offset: Offset(0, 3), // changes position of shadow
+                    //   //   ),
+                    //   // ],
+                    // ),
                     child: Column(
                       children: [
                         Container(
-                          height: 220,
-                          padding: EdgeInsets.all(15),
+                          height: 350,
+                          width: 350,
                           child: Image.file(file!),
                         ),
                         Text(
-                          'Result: ' +
-                              (output![0]['label']).toString().substring(2),
+                          // 'Result: ' +
+                          (output![0]['label']).toString().substring(2),
+                          style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 92, 92, 92)),
                         ),
+
                         Text(
                           'Confidence: ' +
                               ((output![0]['confidence'] as double) * 100)
                                   .toStringAsFixed(0) +
                               "%",
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 92, 92, 92)),
                         ),
                         // Text(fine),
                       ],
                     ),
                   ),
             SizedBox(
-              height: 100,
+              height: 70,
             ),
             Stack(
               children: [
                 Align(
                   alignment: Alignment(-0.5, 0.8),
-                  child: FloatingActionButton(
-                    elevation: 0.0,
+                  child: MaterialButton(
+                    elevation: 10.0,
                     child: new Icon(
-                      Icons.image,
+                      CommunityMaterialIcons.image,
+                      color: Colors.white,
+                      size: 35,
                     ),
-                    backgroundColor: Color.fromARGB(255, 25, 209, 169),
+                    color: Color.fromARGB(255, 25, 209, 169),
                     onPressed: getImageFromGallery,
                   ),
                 ),
                 Align(
                   alignment: Alignment(0.5, 0.8),
-                  child: FloatingActionButton(
+                  child: MaterialButton(
                     elevation: 0.0,
                     child: new Icon(
-                      Icons.camera,
+                      CommunityMaterialIcons.camera_plus_outline,
+                      size: 35,
+                      color: Colors.white,
                     ),
-                    backgroundColor: Color.fromARGB(255, 25, 209, 169),
+                    color: Color.fromARGB(255, 25, 209, 169),
                     onPressed: getImageFromCamera,
                   ),
                 ),
