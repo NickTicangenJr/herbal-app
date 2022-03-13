@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFFF9F8FD),
+          color: Color.fromARGB(255, 240, 239, 245),
           //     gradient: LinearGradient(
           //   begin: Alignment.topRight,
           //   end: Alignment.bottomLeft,

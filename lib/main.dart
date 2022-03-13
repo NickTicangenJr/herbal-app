@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() => runApp(new MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Landing(),
     ));
 
@@ -34,25 +35,18 @@ class _LandingState extends State<Landing> {
       appBar: AppBar(
         flexibleSpace: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(28),
-                    bottomRight: Radius.circular(28)),
                 gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [
-                    Color(0xff5FFBF1),
-                    Color(0xff86A8E7),
-                    Color(0xffD16BA5)
-                  ],
-                ))),
-        toolbarHeight: 80,
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
+        ))),
+        toolbarHeight: 70,
         backgroundColor: Colors.transparent,
         title: Text(
           "Herbal Identifier",
           style: TextStyle(fontSize: 33),
         ),
-        elevation: 0.0,
+        elevation: 10,
         centerTitle: true,
       ),
       body: screens[index],
@@ -63,7 +57,7 @@ class _LandingState extends State<Landing> {
           backgroundColor: Colors.transparent,
           buttonBackgroundColor: Color(0xff5FFBF1),
           items: items,
-          height: 65,
+          height: 45,
           animationDuration: Duration(milliseconds: 300),
           index: index,
           onTap: (index) => setState(

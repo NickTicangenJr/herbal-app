@@ -6,7 +6,7 @@ class Plant extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Container(
-        color: Color(0xFFF9F8FD),
+        color: Color.fromARGB(255, 240, 239, 245),
         // decoration: BoxDecoration(
         //     gradient: LinearGradient(
         //   begin: Alignment.topRight,
