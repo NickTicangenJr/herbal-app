@@ -1,2 +1,35 @@
-0 Malunggay
-1 Rosel
+0 Guava leaves
+1 Senna alata
+2 Aloe vera
+3 Malabar spinach
+4 Bitter gourd
+5 Crape Myrtle 
+6 Garlic
+7 Currant tree
+8 Sour Orange
+9 Ginseng
+10 Gumamela
+11 Soursop
+12 White leadtree
+13 Calamansi
+14 Calachuchi
+15 Averrhoa bilimbi
+16 Yellow bell
+17 Miracle plant
+18 Chaste tree
+19 Ginger
+20 Turmeric
+21 Mangosteen
+22 Heavenly elixir
+23 Moringa
+24 Butterfly coleus
+25 Neem
+26 Fragrant screwpine
+27 Papaya
+28 Banana
+29 Tamarind
+30 Capsicum
+31 Pennyworth 
+32 Lemon grass
+33 Asthma plant
+34 Fukien tea tree 
