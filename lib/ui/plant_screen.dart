@@ -102,7 +102,7 @@ class _PlantScreenState extends State<PlantScreen> {
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                        height: 180,
+                        height: 120,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -110,7 +110,7 @@ class _PlantScreenState extends State<PlantScreen> {
                         child: Row(
                           children: <Widget>[
                             Container(
-                              width: 150,
+                              width: 120,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Colors.black),
@@ -124,7 +124,7 @@ class _PlantScreenState extends State<PlantScreen> {
                                           activity.imageUrl,
                                         ),
                                         fit: BoxFit.cover,
-                                        height: 180,
+                                        height: 120,
                                       ),
                                     ),
                                   ),
@@ -137,14 +137,14 @@ class _PlantScreenState extends State<PlantScreen> {
                                   Text(
                                     activity.name,
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
                                     'Scientific name: \n${activity.sname}',
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.grey,
                                     ),

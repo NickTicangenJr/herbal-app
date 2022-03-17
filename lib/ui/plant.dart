@@ -137,45 +137,6 @@ class Plant extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  // Positioned(
-                                  //   left: 10,
-                                  //   bottom: 10,
-                                  //   child: Column(
-                                  //     crossAxisAlignment:
-                                  //         CrossAxisAlignment.start,
-                                  //     // children: <Widget>[
-                                  //     //   // Text(
-                                  //     //   //   destination.city,
-                                  //     //   //   style: TextStyle(
-                                  //     //   //       fontSize: 24,
-                                  //     //   //       color: Colors.white,
-                                  //     //   //       fontWeight: FontWeight.w600,
-                                  //     //   //       letterSpacing: 1.2),
-                                  //     //   // ),
-                                  //     //   SizedBox(
-                                  //     //     height: 5,
-                                  //     //   ),
-                                  //     //   Row(
-                                  //     //     children: [
-                                  //     //       Icon(
-                                  //     //         CommunityMaterialIcons
-                                  //     //             .fruit_grapes_outline,
-                                  //     //         size: 25,
-                                  //     //         color: Colors.white,
-                                  //     //       ),
-                                  //     //       Text(
-                                  //     //         plant.name,
-                                  //     //         style: TextStyle(
-                                  //     //             fontSize: 24,
-                                  //     //             color: Colors.white,
-                                  //     //             fontWeight: FontWeight.w600,
-                                  //     //             letterSpacing: 1.2),
-                                  //     //       ),
-                                  //     //     ],
-                                  //     //   )
-                                  //     // ],
-                                  //   ),
-                                  // )
                                 ],
                               ),
                             )
