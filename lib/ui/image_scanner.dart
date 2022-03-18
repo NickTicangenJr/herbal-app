@@ -86,13 +86,14 @@ class _ImageScannerState extends State<ImageScanner> {
       body: Container(
         color: Color.fromARGB(255, 240, 239, 245),
         child: Column(
-          children: [
+          children: <Widget>[
             loading == true
                 ? Container(
                     height: 350,
                     width: 350,
                     color: Color.fromARGB(255, 255, 255, 255),
                     margin: EdgeInsets.only(top: 30),
+                    child: Center(child: Text("No image selected")),
                   )
                 : Container(
                     margin: EdgeInsets.only(top: 30),
@@ -143,35 +144,142 @@ class _ImageScannerState extends State<ImageScanner> {
               height: 70,
             ),
             Stack(
-              children: [
-                Align(
-                  alignment: Alignment(-0.5, 0.8),
-                  child: MaterialButton(
-                    elevation: 10.0,
-                    child: new Icon(
-                      CommunityMaterialIcons.image,
-                      color: Colors.white,
-                      size: 35,
+              // child: Column(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Align(
+                      // alignment: Alignment(-0.5, 0.8),
+                      child: GestureDetector(
+                        onTap: getImageFromCamera,
+                        child: Container(
+                          height: 40,
+                          width: 200,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                CommunityMaterialIcons.camera_plus_outline,
+                                size: 25,
+                                color: Color(0xffD16BA5),
+                              ),
+                              Text(
+                                "Camera",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18,
+                                  color: Color.fromARGB(255, 92, 92, 92),
+                                ),
+                              )
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 240, 239, 245),
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                //Bottom
+                                BoxShadow(
+                                  color: Color.fromARGB(160, 209, 107, 165),
+                                  offset: Offset(6, 6),
+                                  blurRadius: 5,
+                                  spreadRadius: 1,
+                                ),
+                                //Top
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  offset: Offset(-6, -6),
+                                  blurRadius: 10,
+                                  spreadRadius: 1,
+                                ),
+                              ]),
+                        ),
+                      ),
                     ),
-                    color: Color.fromARGB(255, 25, 209, 169),
-                    onPressed: getImageFromGallery,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(0.5, 0.8),
-                  child: MaterialButton(
-                    elevation: 0.0,
-                    child: new Icon(
-                      CommunityMaterialIcons.camera_plus_outline,
-                      size: 35,
-                      color: Colors.white,
+                    SizedBox(
+                      height: 25,
                     ),
-                    color: Color.fromARGB(255, 25, 209, 169),
-                    onPressed: getImageFromCamera,
-                  ),
+                    Align(
+                      child: GestureDetector(
+                        onTap: getImageFromGallery,
+                        child: Container(
+                          height: 40,
+                          width: 200,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                CommunityMaterialIcons.image,
+                                size: 25,
+                                color: Color(0xffD16BA5),
+                              ),
+                              Text(
+                                "Album",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18,
+                                  color: Color.fromARGB(255, 92, 92, 92),
+                                ),
+                              )
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 240, 239, 245),
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                //Bottom
+                                BoxShadow(
+                                  color: Color.fromARGB(160, 209, 107, 165),
+                                  offset: Offset(6, 6),
+                                  blurRadius: 5,
+                                  spreadRadius: 1,
+                                ),
+                                //Top
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  offset: Offset(-6, -6),
+                                  blurRadius: 10,
+                                  spreadRadius: 1,
+                                ),
+                              ]),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
+              // ),
             )
+
+            // Stack(
+            //   children: [
+            //     Align(
+            //       alignment: Alignment(-0.5, 0.8),
+            //       child: MaterialButton(
+            //         elevation: 10.0,
+            //         child: new Icon(
+            //           CommunityMaterialIcons.image,
+            //           color: Colors.white,
+            //           size: 35,
+            //         ),
+            //         color: Color.fromARGB(255, 25, 209, 169),
+            //         onPressed: getImageFromGallery,
+            //       ),
+            //     ),
+            //     Align(
+            //       alignment: Alignment(0.5, 0.8),
+            //       child: MaterialButton(
+            //         elevation: 0.0,
+            //         child: new Icon(
+            //           CommunityMaterialIcons.camera_plus_outline,
+            //           size: 35,
+            //           color: Colors.white,
+            //         ),
+            //         color: Color.fromARGB(255, 25, 209, 169),
+            //         onPressed: getImageFromCamera,
+            //       ),
+            //     ),
+            //   ],
+            // )
           ],
         ),
       ),
