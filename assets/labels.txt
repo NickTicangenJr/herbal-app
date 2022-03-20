@@ -1,35 +1,65 @@
-0 Guava leaves
-1 Senna alata
-2 Aloe vera
-3 Malabar spinach
-4 Bitter gourd
-5 Crape Myrtle 
-6 Garlic
-7 Currant tree
-8 Sour Orange
-9 Ginseng
-10 Gumamela
-11 Soursop
-12 White leadtree
-13 Calamansi
-14 Calachuchi
-15 Averrhoa bilimbi
-16 Yellow bell
-17 Miracle plant
-18 Chaste tree
-19 Ginger
-20 Turmeric
-21 Mangosteen
-22 Heavenly elixir
-23 Moringa/Malunggay
-24 Butterfly coleus
-25 Neem
-26 Fragrant screwpine
-27 Papaya
-28 Banana
-29 Tamarind
-30 Capsicum
-31 Pennyworth 
-32 Lemon grass
-33 Asthma plant
-34 Fukien tea tree 
+0 Abukado
+1 Adelfa
+2 Akapulko
+3 Alagaw
+4 Alugbati
+5 Alusiman
+6 Amarillo
+7 Ampalaya
+8 Atis
+9 Atsuete
+10 Balete
+11 Balimbing
+12 Bawang
+13 Bayabas
+14 Buyo
+15 Cacao
+16 Comfrey
+17 Duhat
+18 Gisol
+19 Gumamela
+20 Herba buena
+21 Ipil-ipil
+22 Kalamansi
+23 Kalatsutsi
+24 Kamantigui
+25 Kamias
+26 Kamoteng kahoy
+27 Kampanilya
+28 Kantutay
+29 Kanya pistula
+30 Karot
+31 Kataka-taka
+32 Kilaw
+33 Kugon
+34 Lagundi
+35 Langka
+36 Luya
+37 Mais
+38 Makabuhay
+39 Makahiya
+40 Malunggay
+41 Mansanilya
+42 Mayana
+43 Niyog-niyogan
+44 Okra
+45 Oregano
+46 Pandakaki-puti
+47 Pandan
+48 Papaya
+49 Pinya
+50 Rabanus
+51 Repolyo
+52 Romero
+53 Sabila
+54 Saging
+55 Sambong
+56 Sampalok
+57 Singkamas
+58 Takip-kuhol
+59 Talong
+60 Talumpunay
+61 Tanglad
+62 Sili
+63 Tsaang gubat
+64 Tawa-tawa

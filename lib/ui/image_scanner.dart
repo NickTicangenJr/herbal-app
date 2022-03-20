@@ -20,7 +20,46 @@ class _ImageScannerState extends State<ImageScanner> {
   bool loading = true;
   File? file;
   var output;
+  // var label;
+  // var use;
   ImagePicker image = ImagePicker();
+  // var medecine = {
+  //   'Guava leaves': 'Anti inflamatory',
+  //   'Senna alata': 'Anti inflamatory',
+  //   'Aloe vera': 'Anti inflammatory',
+  //   'Malabar spinach': 'Anti inflamatory',
+  //   'Bitter gourd': 'Anti inflamatory',
+  //   'Crape Myrtle': 'Anti inflamatory',
+  //   'Garlic': 'Anti inflamatory',
+  //   'Currant tree': 'Anti inflamatory',
+  //   'Sour Orange': 'Anti inflamatory',
+  //   'Ginseng': 'Anti inflamatory',
+  //   'Gumamela': 'Anti inflamatory',
+  //   'Soursop': 'Anti inflamatory',
+  //   'White leadtree': 'Anti inflamatory',
+  //   'Calamansi': 'Anti inflamatory',
+  //   'Calachuchi': 'Anti inflamatory',
+  //   'Averrhoa bilimbi': 'Anti inflamatory',
+  //   'Yellow bell': 'Anti inflamatory',
+  //   'Miracle plant': 'Anti inflamatory',
+  //   'Chaste tree': 'Anti inflamatory',
+  //   'Ginger': 'Anti inflamatory',
+  //   'Turmeric': 'Anti inflamatory',
+  //   'Mangosteen': 'Anti inflamatory',
+  //   'Heavenly elixir': 'Anti inflamatory',
+  //   'Moringa': 'Anti inflamatory',
+  //   'Butterfly coleus': 'Anti inflamatory',
+  //   'Neem': 'Anti inflamatory',
+  //   'Fragrant screwpine': 'Anti inflamatory',
+  //   'Papaya': 'Anti inflamatory',
+  //   'Banana': 'Anti inflamatory',
+  //   'Tamarind': 'Anti inflamatory',
+  //   'Capsicum': 'Anti inflamatory',
+  //   'Pennyworth ': 'Anti inflamatory',
+  //   'Lemon grass': 'Anti inflamatory',
+  //   'Asthma plant': 'Anti inflamatory',
+  //   'Fukien tea tree': 'Anti inflamatory',
+  // };
 
   @override
   void initState() {
@@ -32,12 +71,12 @@ class _ImageScannerState extends State<ImageScanner> {
 
   detectimage(File l) async {
     var prediction = await Tflite.runModelOnImage(
-      path: l.path,
-      numResults: 2,
-      threshold: 0.2,
-      imageMean: 0.0,
-      imageStd: 255.0,
-    );
+        path: l.path,
+        numResults: 2,
+        threshold: 0.2,
+        imageMean: 0.0,
+        imageStd: 255.0,
+        asynch: true);
     //   path: filepath,   // required
     // imageMean: 0.0,   // defaults to 117.0
     // imageStd: 255.0,  // defaults to 1.0
@@ -47,6 +86,8 @@ class _ImageScannerState extends State<ImageScanner> {
 
     setState(() {
       output = prediction;
+      // label = (output[0]['label']).toString().substring(2);
+      // use = medecine[label];
       loading = false;
     });
   }
@@ -96,6 +137,7 @@ class _ImageScannerState extends State<ImageScanner> {
                     child: Center(child: Text("No image selected")),
                   )
                 : Container(
+                    width: 350,
                     margin: EdgeInsets.only(top: 30),
                     color: Color.fromARGB(255, 255, 255, 255),
 
@@ -115,28 +157,72 @@ class _ImageScannerState extends State<ImageScanner> {
                         Container(
                           height: 350,
                           width: 350,
-                          child: Image.file(file!),
+                          child: Image.file(
+                            file!,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        Text(
-                          // 'Result: ' +
-                          (output![0]['label']).toString().substring(2),
-                          style: TextStyle(
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 92, 92, 92)),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          ),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    // 'Result: ' +
+                                    (output![0]['label'])
+                                        .toString()
+                                        .substring(2),
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromARGB(255, 92, 92, 92),
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  Text(
+                                    ' ( ' +
+                                        ((output![0]['confidence'] as double) *
+                                                100)
+                                            .toStringAsFixed(0) +
+                                        "% )",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 92, 92, 92),
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Medecinal use: ',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 92, 92, 92),
+                                    ),
+                                  ),
+                                  Text(
+                                    'In progress',
+                                    // use,
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 92, 92, 92),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-
-                        Text(
-                          'Confidence: ' +
-                              ((output![0]['confidence'] as double) * 100)
-                                  .toStringAsFixed(0) +
-                              "%",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 92, 92, 92)),
-                        ),
-                        // Text(fine),
                       ],
                     ),
                   ),
