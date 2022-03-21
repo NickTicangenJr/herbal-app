@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bottom_nav_ui">
    <application
-        android:label="bottom_nav_ui"
+        android:label="Herbs Identifier"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,17 +1,23 @@
-import 'package:bottom_nav_ui/ui/plant_screen.dart';
+import 'package:bottom_nav_ui/ui/herb_screen.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:list_view_test/models/destination_model.dart';
-import 'package:bottom_nav_ui/models/plant_model.dart';
+import 'package:bottom_nav_ui/models/herb_model.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_travel_ui/models/destination_model.dart';
 // import 'package:flutter_travel_ui/screens/destination_screen.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Plant extends StatelessWidget {
+class Plant extends StatefulWidget {
   const Plant({Key? key}) : super(key: key);
 
+  @override
+  State<Plant> createState() => _PlantState();
+}
+
+class _PlantState extends State<Plant> {
+  // var _index;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,7 +57,7 @@ class Plant extends StatelessWidget {
           ),
           Container(
               height: 300,
-              // color: Colors.blue,
+              // color: Colors.blue,22222222222222222222222
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: plants.length,
@@ -90,8 +96,7 @@ class Plant extends StatelessWidget {
                                       Row(
                                         children: [
                                           Icon(
-                                            CommunityMaterialIcons
-                                                .fruit_grapes_outline,
+                                            CommunityMaterialIcons.leaf,
                                             size: 25,
                                             color: Color(0xffD16BA5),
                                           ),
