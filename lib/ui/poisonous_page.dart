@@ -1,16 +1,15 @@
-import 'package:bottom_nav_ui/models/fragrant_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_model.dart';
+import 'package:bottom_nav_ui/models/poisonous_data.dart';
 import 'package:bottom_nav_ui/ui/plant_cards.dart';
-import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 
-class HerbPage extends StatefulWidget {
+class PoisonousPage extends StatefulWidget {
+  const PoisonousPage({Key? key}) : super(key: key);
+
   @override
-  State<HerbPage> createState() => _HerbPageState();
+  State<PoisonousPage> createState() => _PoisonousPageState();
 }
 
-class _HerbPageState extends State<HerbPage> {
+class _PoisonousPageState extends State<PoisonousPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +40,7 @@ class _HerbPageState extends State<HerbPage> {
                       bottomRight: Radius.circular(30),
                     ),
                     child: Image(
-                      image: AssetImage('assets/images/herb.jpg'),
+                      image: AssetImage('assets/images/cerbera.jpg'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -68,33 +67,13 @@ class _HerbPageState extends State<HerbPage> {
             SizedBox(
               height: 30,
             ),
-            // Row(
-            //   children: <Widget>[
-            //     SizedBox(
-            //       width: 50,
-            //     ),
-            //     Icon(
-            //       CommunityMaterialIcons.leaf,
-            //       size: 25,
-            //       color: Color(0xffD16BA5),
-            //     ),
-            //     Text(
-            //       widget.activi.name,
-            //       style: TextStyle(
-            //           fontSize: 35,
-            //           fontWeight: FontWeight.w300,
-            //           letterSpacing: 2),
-            //     ),
-            //   ],
-            // ),
 
             // ============================================================
             Expanded(
               child: ListView.builder(
-                itemCount: activities.length,
+                itemCount: poisonous.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Activity activity = activities[index];
-                  // Fragrant fragrant = widget.plant.fragrants[index];
+                  Poison poison = poisonous[index];
                   return Stack(
                     children: <Widget>[
                       Container(
@@ -118,7 +97,7 @@ class _HerbPageState extends State<HerbPage> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image(
                                         image: AssetImage(
-                                          activity.imageUrl,
+                                          poison.imageUrl,
                                         ),
                                         fit: BoxFit.cover,
                                         height: 120,
@@ -132,14 +111,14 @@ class _HerbPageState extends State<HerbPage> {
                               child: Column(
                                 children: [
                                   Text(
-                                    activity.name,
+                                    poison.name,
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
-                                    'Scientific name: \n${activity.sname}',
+                                    'Scientific name: \n${poison.sname}',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600,

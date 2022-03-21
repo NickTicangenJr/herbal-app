@@ -1,16 +1,15 @@
-import 'package:bottom_nav_ui/models/fragrant_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_model.dart';
+import 'package:bottom_nav_ui/models/insectivorous_data.dart';
 import 'package:bottom_nav_ui/ui/plant_cards.dart';
-import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 
-class HerbPage extends StatefulWidget {
+class InsectivorousPage extends StatefulWidget {
+  const InsectivorousPage({Key? key}) : super(key: key);
+
   @override
-  State<HerbPage> createState() => _HerbPageState();
+  State<InsectivorousPage> createState() => _InsectivorousPageState();
 }
 
-class _HerbPageState extends State<HerbPage> {
+class _InsectivorousPageState extends State<InsectivorousPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +40,7 @@ class _HerbPageState extends State<HerbPage> {
                       bottomRight: Radius.circular(30),
                     ),
                     child: Image(
-                      image: AssetImage('assets/images/herb.jpg'),
+                      image: AssetImage('assets/images/tropical_pitcher.jpg'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -68,33 +67,13 @@ class _HerbPageState extends State<HerbPage> {
             SizedBox(
               height: 30,
             ),
-            // Row(
-            //   children: <Widget>[
-            //     SizedBox(
-            //       width: 50,
-            //     ),
-            //     Icon(
-            //       CommunityMaterialIcons.leaf,
-            //       size: 25,
-            //       color: Color(0xffD16BA5),
-            //     ),
-            //     Text(
-            //       widget.activi.name,
-            //       style: TextStyle(
-            //           fontSize: 35,
-            //           fontWeight: FontWeight.w300,
-            //           letterSpacing: 2),
-            //     ),
-            //   ],
-            // ),
 
             // ============================================================
             Expanded(
               child: ListView.builder(
-                itemCount: activities.length,
+                itemCount: insecs.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Activity activity = activities[index];
-                  // Fragrant fragrant = widget.plant.fragrants[index];
+                  Insec insec = insecs[index];
                   return Stack(
                     children: <Widget>[
                       Container(
@@ -118,7 +97,7 @@ class _HerbPageState extends State<HerbPage> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image(
                                         image: AssetImage(
-                                          activity.imageUrl,
+                                          insec.imageUrl,
                                         ),
                                         fit: BoxFit.cover,
                                         height: 120,
@@ -132,14 +111,14 @@ class _HerbPageState extends State<HerbPage> {
                               child: Column(
                                 children: [
                                   Text(
-                                    activity.name,
+                                    insec.name,
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
-                                    'Scientific name: \n${activity.sname}',
+                                    'Scientific name: \n${insec.sname}',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600,

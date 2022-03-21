@@ -1,22 +1,22 @@
-class Fragrant {
+class Insec {
   String imageUrl;
   String name;
   String sname;
 
-  Fragrant({
+  Insec({
     required this.imageUrl,
     required this.name,
     required this.sname,
   });
 }
 
-List<Fragrant> fragrants = [
-  Fragrant(
+List<Insec> insecs = [
+  Insec(
     imageUrl: 'assets/images/fragrant.jpg',
     name: 'fragrant',
     sname: 'Aloe barbadensis miller',
   ),
-  Fragrant(
+  Insec(
     imageUrl: 'assets/images/fragrant.jpg',
     name: 'fragrant',
     sname: 'Mimosa pudica Linn.',

@@ -1,21 +1,15 @@
 import 'package:bottom_nav_ui/models/fragrant_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_data_model.dart';
-import 'package:bottom_nav_ui/models/herb_model.dart';
-import 'package:community_material_icon/community_material_icon.dart';
+import 'package:bottom_nav_ui/ui/plant_cards.dart';
 import 'package:flutter/material.dart';
 
-import '../models/herb_model.dart';
-
-class PlantScreen extends StatefulWidget {
-  final Destination plant;
-
-  PlantScreen({required this.plant});
+class FragrantPage extends StatefulWidget {
+  const FragrantPage({Key? key}) : super(key: key);
 
   @override
-  State<PlantScreen> createState() => _PlantScreenState();
+  State<FragrantPage> createState() => _FragrantPageState();
 }
 
-class _PlantScreenState extends State<PlantScreen> {
+class _FragrantPageState extends State<FragrantPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,17 +34,14 @@ class _PlantScreenState extends State<PlantScreen> {
                       ),
                     ],
                   ),
-                  child: Hero(
-                    tag: widget.plant.imageUrl,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30),
-                        bottomRight: Radius.circular(30),
-                      ),
-                      child: Image(
-                        image: AssetImage(widget.plant.imageUrl),
-                        fit: BoxFit.cover,
-                      ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30),
+                    ),
+                    child: Image(
+                      image: AssetImage('assets/images/fragrant.jpg'),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -59,7 +50,10 @@ class _PlantScreenState extends State<PlantScreen> {
                   child: Row(
                     children: <Widget>[
                       IconButton(
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () {
+                          Navigator.of(context).pop(MaterialPageRoute(
+                              builder: (context) => const PlantCards()));
+                        },
                         icon: Icon(Icons.arrow_back),
                         iconSize: 30,
                         color: Colors.white,
@@ -73,33 +67,33 @@ class _PlantScreenState extends State<PlantScreen> {
             SizedBox(
               height: 30,
             ),
-            Row(
-              children: <Widget>[
-                SizedBox(
-                  width: 50,
-                ),
-                Icon(
-                  CommunityMaterialIcons.leaf,
-                  size: 25,
-                  color: Color(0xffD16BA5),
-                ),
-                Text(
-                  widget.plant.name,
-                  style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 2),
-                ),
-              ],
-            ),
+            // Row(
+            //   children: <Widget>[
+            //     SizedBox(
+            //       width: 50,
+            //     ),
+            //     Icon(
+            //       CommunityMaterialIcons.leaf,
+            //       size: 25,
+            //       color: Color(0xffD16BA5),
+            //     ),
+            //     Text(
+            //       widget.activi.name,
+            //       style: TextStyle(
+            //           fontSize: 35,
+            //           fontWeight: FontWeight.w300,
+            //           letterSpacing: 2),
+            //     ),
+            //   ],
+            // ),
 
             // ============================================================
             Expanded(
               child: ListView.builder(
-                itemCount: widget.plant.fragrants.length,
+                itemCount: fragrants.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Activity activity = widget.plant.activities[index];
-                  Fragrant fragrant = widget.plant.fragrants[index];
+                  Fragrant fragrant = fragrants[index];
+                  // Fragrant fragrant = widget.plant.fragrants[index];
                   return Stack(
                     children: <Widget>[
                       Container(
@@ -137,14 +131,14 @@ class _PlantScreenState extends State<PlantScreen> {
                               child: Column(
                                 children: [
                                   Text(
-                                    activity.name,
+                                    fragrant.name,
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
-                                    'Scientific name: \n${activity.sname}',
+                                    'Scientific name: \n${fragrant.sname}',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600,
@@ -156,39 +150,6 @@ class _PlantScreenState extends State<PlantScreen> {
                             )
                           ],
                         ),
-
-                        // child: Column(
-                        //   children: <Widget>[
-                        //     Row(
-                        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //       crossAxisAlignment: CrossAxisAlignment.start,
-                        //       children: <Widget>[
-                        //         Text(activity.name),
-                        //         Text(
-                        //           '\$${activity.price}',
-                        //         ),
-                        //       ],
-                        //     ),
-                        //     Text(activity.type),
-                        //     SizedBox(
-                        //       height: 10,
-                        //     ),
-                        //     Row(
-                        //       children: <Widget>[
-                        //         Container(
-                        //           width: 70,
-                        //           decoration: BoxDecoration(
-                        //             color: Colors.black12,
-                        //             borderRadius: BorderRadius.circular(10),
-                        //           ),
-                        //           child: Text(
-                        //             activity.startTimes[0],
-                        //           ),
-                        //         ),
-                        //       ],
-                        //     )
-                        //   ],
-                        // ),
                       )
                     ],
                   );
