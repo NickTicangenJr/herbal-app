@@ -1,74 +1,50 @@
 0 Abukado
-1 Adelfa
-2 Akapulko
-3 Alagaw
-4 Sabila
-5 Alugbati
-6 Alusiman
-7 Amarillo
-8 Ampalaya
-9 Atis
-10 Atsuete
-11 Balanoy
-12 Balbas pusa
-13 Balete
-14 Balimbing
-15 Banaba
-16 Bawang
-17 Bayabas
-18 Bignay
-19 Buyo
-20 Cacao
-21 Comfrey
-22 Dalandan
-23 Duhat
-24 Ganoderma
-25 Ginseng
-26 Gisol
-27 Gumamela
-28 Guyabano
-29 Ipil-ipil
-30 Kalamansi
-31 Kalatsutsi
-32 Kamatigui
-33 Kamias
-34 Kamoteng kahoy
-35 Kampanilya
-36 Kantutay
-37 Kanya pistula
-38 Karot
-39 Katakataka
-40 Khus
-41 Kugon
-42 Kulantro
-43 Lagundi
-44 Langka
-45 Luya
-46 Luyang dilaw
-47 Mangostin
-48 Makabuhay
-49 Mais
-50 Makaiya
-51 Malunggay
-52 Masanilya
-53 Mayana
-54 Methi
-55 Mint
-56 Morus
-57 Nim
-58 Niyog niyogan
-59 Okra
-60 Oregano
-61 Pandakiki puti
-62 Pandan
-63 Papaya
-64 Pinya
-65 Rabanos
-66 Repolyo
-67 Romero
-68 Roselle
-69 Saging
-70 Sili
-71 Talong
-72 Takip kuhol
-73 Tawa-tawa
+1 Alagaw
+2 Aloe vera
+3 Amarillo
+4 Ampalaya
+5 Atis
+6 Balanoy
+7 Balbas pusa
+8 Balete
+9 Balimbing
+10 Bawang
+11 Bayabas
+12 Buyo
+13 Cacao
+14 Comfrey
+15 Dalandan
+16 Ganoderma
+17 Gumamela
+18 Guyabano
+19 Ipil-ipil
+20 Kalatsutsi
+21 Kamatigi
+22 Kamias
+23 Kampanilya
+24 Karot
+25 Kataka-taka
+26 Luyang dilaw
+27 Mangostin
+28 Mais
+29 Makahiya
+30 Malunggay
+31 Mayana
+32 Methi
+33 Mint
+34 Nim
+35 Niyog-niyogan
+36 Okra
+37 Pandakiki-puti
+38 Pandan
+39 Rabanus
+40 Repolyo
+41 Romero
+42 Saging
+43 Sampalok
+44 Sili
+45 Takip-kuhol
+46 Talong
+47 Tanglad
+48 Tawa tawa
+49 Tsaang gubat

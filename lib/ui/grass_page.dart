@@ -1,15 +1,17 @@
 import 'package:bottom_nav_ui/models/fragrant_data_model.dart';
-import 'package:bottom_nav_ui/ui/plant_cards.dart';
+import 'package:bottom_nav_ui/models/grass_data_model.dart';
 import 'package:flutter/material.dart';
 
-class FragrantPage extends StatefulWidget {
-  const FragrantPage({Key? key}) : super(key: key);
+import 'plant_cards.dart';
+
+class GrassPage extends StatefulWidget {
+  const GrassPage({Key? key}) : super(key: key);
 
   @override
-  State<FragrantPage> createState() => _FragrantPageState();
+  State<GrassPage> createState() => _GrassPageState();
 }
 
-class _FragrantPageState extends State<FragrantPage> {
+class _GrassPageState extends State<GrassPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +75,7 @@ class _FragrantPageState extends State<FragrantPage> {
               child: ListView.builder(
                 itemCount: fragrants.length,
                 itemBuilder: (BuildContext context, int index) {
-                  Fragrant fragrant = fragrants[index];
+                  Grass grass = grasses[index];
                   // Fragrant fragrant = widget.plant.fragrants[index];
                   return Stack(
                     children: <Widget>[
@@ -98,7 +100,7 @@ class _FragrantPageState extends State<FragrantPage> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image(
                                         image: AssetImage(
-                                          fragrant.imageUrl,
+                                          grass.imageUrl,
                                         ),
                                         fit: BoxFit.cover,
                                         height: 120,
@@ -112,14 +114,14 @@ class _FragrantPageState extends State<FragrantPage> {
                               child: Column(
                                 children: [
                                   Text(
-                                    fragrant.name,
+                                    grass.name,
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text(
-                                    'Scientific name: \n${fragrant.sname}',
+                                    'Scientific name: \n${grass.sname}',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w600,

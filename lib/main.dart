@@ -7,6 +7,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(new MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -46,11 +47,12 @@ class _LandingState extends State<Landing> {
           end: Alignment.bottomLeft,
           colors: [Color(0xff5FFBF1), Color(0xff86A8E7), Color(0xffD16BA5)],
         ))),
-        toolbarHeight: 70,
+        toolbarHeight: 68,
         backgroundColor: Colors.transparent,
         title: Text(
           "Herbal Identifier",
-          style: TextStyle(fontSize: 33),
+          style: GoogleFonts.kanit(
+              fontSize: 35, fontWeight: FontWeight.w500, letterSpacing: 1),
         ),
         elevation: 10,
         centerTitle: true,

@@ -20,46 +20,61 @@ class _ImageScannerState extends State<ImageScanner> {
   bool loading = true;
   File? file;
   var output;
-  // var label;
-  // var use;
+  var label;
+  var use;
   ImagePicker image = ImagePicker();
-  // var medecine = {
-  //   'Guava leaves': 'Anti inflamatory',
-  //   'Senna alata': 'Anti inflamatory',
-  //   'Aloe vera': 'Anti inflammatory',
-  //   'Malabar spinach': 'Anti inflamatory',
-  //   'Bitter gourd': 'Anti inflamatory',
-  //   'Crape Myrtle': 'Anti inflamatory',
-  //   'Garlic': 'Anti inflamatory',
-  //   'Currant tree': 'Anti inflamatory',
-  //   'Sour Orange': 'Anti inflamatory',
-  //   'Ginseng': 'Anti inflamatory',
-  //   'Gumamela': 'Anti inflamatory',
-  //   'Soursop': 'Anti inflamatory',
-  //   'White leadtree': 'Anti inflamatory',
-  //   'Calamansi': 'Anti inflamatory',
-  //   'Calachuchi': 'Anti inflamatory',
-  //   'Averrhoa bilimbi': 'Anti inflamatory',
-  //   'Yellow bell': 'Anti inflamatory',
-  //   'Miracle plant': 'Anti inflamatory',
-  //   'Chaste tree': 'Anti inflamatory',
-  //   'Ginger': 'Anti inflamatory',
-  //   'Turmeric': 'Anti inflamatory',
-  //   'Mangosteen': 'Anti inflamatory',
-  //   'Heavenly elixir': 'Anti inflamatory',
-  //   'Moringa': 'Anti inflamatory',
-  //   'Butterfly coleus': 'Anti inflamatory',
-  //   'Neem': 'Anti inflamatory',
-  //   'Fragrant screwpine': 'Anti inflamatory',
-  //   'Papaya': 'Anti inflamatory',
-  //   'Banana': 'Anti inflamatory',
-  //   'Tamarind': 'Anti inflamatory',
-  //   'Capsicum': 'Anti inflamatory',
-  //   'Pennyworth ': 'Anti inflamatory',
-  //   'Lemon grass': 'Anti inflamatory',
-  //   'Asthma plant': 'Anti inflamatory',
-  //   'Fukien tea tree': 'Anti inflamatory',
-  // };
+  var medecine = {
+    "Abukado": "Gamot",
+    "Alagaw": "Gamot",
+    "Aloe vera": "Anti inflamatory",
+    "Amarillo": "Gamot",
+    "Ampalaya": "Gamot",
+    "Atis": "Gamot",
+    "Balanoy": "Gamot",
+    "Balbas pusa": "Gamot",
+    "Balete": "Gamot",
+    "Balimbing": "Gamot",
+    "Bawang": "Gamot",
+    "Bayabas": "Gamot",
+    "Buyo": "Gamot",
+    "Cacao": "Gamot",
+    "Comfrey": "Gamot",
+    "Dalandan": "Gamot",
+    "Ganoderma": "Gamot",
+    "Gumamela": "Gamot",
+    "Guyabano": "Gamot",
+    "Ipil-ipil": "Gamot",
+    "Kalatsutsi": "Gamot",
+    "Kamatigi": "Gamot",
+    "Kamias": "Gamot",
+    "Kampanilya": "Gamot",
+    "Karot": "Gamot",
+    "Kataka-taka": "Gamot",
+    "Luyang dilaw": "Gamot",
+    "Mangostin": "Gamot",
+    "Mais": "Gamot",
+    "Makahiya": "Gamot",
+    "Malunggay": "Gamot",
+    "Mayana": "Gamot",
+    "Methi": "Gamot",
+    "Mint": "Gamot",
+    "Nim": "Gamot",
+    "Niyog-niyogan": "Gamot",
+    "Okra": "Gamot",
+    "Pandakiki-puti": "Gamot",
+    "Pandan": "Gamot",
+    "Rabanus": "Gamot",
+    "Repolyo": "Gamot",
+    "Romero": "Gamot",
+    "Saging": "Gamot",
+    "Sampalok": "Gamot",
+    "Sili": "Gamot",
+    "Takip-kuhol": "Gamot",
+    "Talong": "Gamot",
+    "Tanglad": "Gamot",
+    "Tawa tawa": "Gamot",
+    "Tsaang gubat": "Gamot",
+  };
 
   @override
   void initState() {
@@ -71,12 +86,13 @@ class _ImageScannerState extends State<ImageScanner> {
 
   detectimage(File l) async {
     var prediction = await Tflite.runModelOnImage(
-        path: l.path,
-        numResults: 2,
-        threshold: 0.2,
-        imageMean: 0.0,
-        imageStd: 255.0,
-        asynch: true);
+      path: l.path,
+      numResults: 2,
+      threshold: 0.2,
+      imageMean: 0.0,
+      imageStd: 255.0,
+      asynch: true,
+    );
     //   path: filepath,   // required
     // imageMean: 0.0,   // defaults to 117.0
     // imageStd: 255.0,  // defaults to 1.0
@@ -86,8 +102,8 @@ class _ImageScannerState extends State<ImageScanner> {
 
     setState(() {
       output = prediction;
-      // label = (output[0]['label']).toString().substring(2);
-      // use = medecine[label];
+      label = (output![0]['label']).toString().substring(2);
+      use = medecine[label];
       loading = false;
     });
   }
@@ -204,15 +220,17 @@ class _ImageScannerState extends State<ImageScanner> {
                                   Text(
                                     'Medecinal use: ',
                                     style: TextStyle(
+                                      fontStyle: FontStyle.italic,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 92, 92, 92),
                                     ),
                                   ),
                                   Text(
-                                    'In progress',
+                                    use.toString(),
                                     // use,
                                     style: TextStyle(
+                                      fontStyle: FontStyle.italic,
                                       fontSize: 20,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 92, 92, 92),
