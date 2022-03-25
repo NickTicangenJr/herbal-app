@@ -353,24 +353,25 @@ class _ImageScannerState extends State<ImageScanner> {
                             ],
                           ),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 240, 239, 245),
-                              borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
-                                //Bottom
-                                BoxShadow(
-                                  color: Color.fromARGB(160, 209, 107, 165),
-                                  offset: Offset(6, 6),
-                                  blurRadius: 5,
-                                  spreadRadius: 1,
-                                ),
-                                //Top
-                                BoxShadow(
-                                  color: Color.fromARGB(255, 255, 255, 255),
-                                  offset: Offset(-6, -6),
-                                  blurRadius: 10,
-                                  spreadRadius: 1,
-                                ),
-                              ]),
+                            color: Color.fromARGB(255, 240, 239, 245),
+                            borderRadius: BorderRadius.circular(12),
+                            boxShadow: [
+                              //Bottom
+                              BoxShadow(
+                                color: Color.fromARGB(160, 209, 107, 165),
+                                offset: Offset(6, 6),
+                                blurRadius: 5,
+                                spreadRadius: 1,
+                              ),
+                              //Top
+                              BoxShadow(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                offset: Offset(-6, -6),
+                                blurRadius: 10,
+                                spreadRadius: 1,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
