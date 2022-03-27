@@ -1,50 +1,50 @@
-0 Abukado
-1 Alagaw
-2 Aloe vera
-3 Amarillo
-4 Ampalaya
-5 Atis
-6 Balanoy
-7 Balbas pusa
-8 Balete
-9 Balimbing
-10 Bawang
-11 Bayabas
-12 Buyo
-13 Cacao
-14 Comfrey
-15 Dalandan
-16 Ganoderma
-17 Gumamela
-18 Guyabano
-19 Ipil-ipil
-20 Kalatsutsi
-21 Kamatigi
-22 Kamias
-23 Kampanilya
-24 Karot
-25 Kataka-taka
-26 Luyang dilaw
-27 Mangostin
-28 Mais
-29 Makahiya
-30 Malunggay
-31 Mayana
-32 Methi
-33 Mint
-34 Nim
-35 Niyog-niyogan
-36 Okra
-37 Pandakiki-puti
-38 Pandan
-39 Rabanus
-40 Repolyo
-41 Romero
-42 Saging
-43 Sampalok
-44 Sili
-45 Takip-kuhol
-46 Talong
-47 Tanglad
-48 Tawa tawa
-49 Tsaang gubat
+0 Abukado(Lower cholesterol levels)
+1 Alagaw(Loosen phlegm and relieve coughs)
+2 Aloe vera(Anti inflamatory)
+3 Amarillo(for treatment of indigestion, colic, severe constipation)
+4 Ampalaya(Leaf juice is supposedly a good antitussive)
+5 Atis(Helps to manage cough and cold due to its Ushna)
+6 Balanoy(Decoction of leaves also used for hiccups, vomiting and nausea)
+7 Balbas pusa(To treat renal inflammation, kidney stones, and dysuria.)
+8 Balete(As dressings for wounds, cure for headaches.)
+9 Balimbing(Supports the immune system in its daily functions)
+10 Bawang(To treat arthritis, toothache, chronic cough, constipation)
+11 Bayabas(Guava leaf for stomach and intestinal conditions, pain, diabetes, and wound healing.)
+12 Buyo(Source of antioxidant that fights oxidative stress by scavenging free radicals.)
+13 Cacao(For diarrhea, asthma, bronchitis, and as an expectorant for lung congestion.)
+14 Comfrey(treating wounds, skin ulcers, thrombophlebitis, bruises, and sprains and strains.)
+15 Dalandan(Used to relieve nausea and vomiting.)
+16 Ganoderma(Increases T-cell activity and is a treatment for viral hepatitis.)
+17 Gumamela(Used to treat headaches, boils, swelling, abscesses and mumps.)
+18 Guyabano(It helps lower fever, spasms, heart rate, and blood pressure.)
+19 Ipil-ipil(Used for Intestinal parasitism: ascaris and trichinosis.)
+20 Kalatsutsi(Used as purgative, remedy for pain, fever, diarrhoea and cure for itch.)
+21 Kamatigi(Used as poultice to dissolve whitlow.)
+22 Kamias(Relieve coughing, thrush, hemorrhoids, stings, itches, pimples and skin eruptions.)
+23 Kampanilya(Decoction of leaves in small doses used as antidote for poisoning.)
+24 Karot(Carrot root is used for Vitamin A deficiency.)
+25 Kataka-taka(Antiseptic, and counter-irritant against poisonous insect bites.)
+26 Luyang dilaw(Helps Ease Arthritic Pain and Other Body Pain. It Boosts the Immune System)
+27 Mangostin(Used for diarrhea.)
+28 Mais(Used for corn ethanol)
+29 Makahiya(Roots used as diuretic; also used for dysentery and dysmenorrhea.)
+30 Malunggay(Reduce swelling, as an antioxidant, to prevent spasms)
+31 Mayana(Used for pain, sore, swelling and cuts)
+32 Methi(Used as a remedy for stomach disorders, constipation)
+33 Mint(Remedy for digestive problems.)
+34 Neem(Neem leaf is used for leprosy, eye disorders, bloody nose, intestinal worms)
+35 Niyog-niyogan(Remedy for headaches)
+36 Okra(Reduce the risk of like cancer, diabetes, stroke, and heart disease.)
+37 Pandakiki-puti(To relieve head, chest and pelvic congestion)
+38 Pandan(pain relief, especially arthritis and joint pain)
+39 Rabanus(Rich in antioxidants and minerals like calcium and potassium)
+40 Repolyo(Contains antioxidants that may help reduce inflammation.)
+41 Romero(Boost the immune system and improve blood circulation.)
+42 Saging(Used to treat biliousness and heartburn.)
+43 Sampalok(Leaves used to inflammatory swellings of ankles and joints. )
+44 Sili(Antihyperglycemic/Anti-diabetic.)
+45 Takip-kuhol(Improve memory and mental function)
+46 Talong(Crushed leaves are used to sooth inflamed hemorrhoids.)
+47 Tanglad(Treating digestive tract spasms)
+48 Tawa tawa(For the treatment of dengue.)
+49 Tsaang gubat(Anti-spasmodic, mouthwash and body cleanser)

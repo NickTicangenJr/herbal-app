@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
                               // isRepeatingAnimation: true,
                               animatedTexts: [
                                 FadeAnimatedText(
-                                  'HERBS',
+                                  'MIND-BENDING',
                                   textStyle: TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.w400,
@@ -83,7 +83,7 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                                 FadeAnimatedText(
-                                  'FRAGRANT',
+                                  'ENIGMATIC',
                                   textStyle: TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.w400,
@@ -91,7 +91,7 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                                 FadeAnimatedText(
-                                  'POISONOUS',
+                                  'INHIBATIONS',
                                   textStyle: TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.w400,
@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                                 FadeAnimatedText(
-                                  'INSECTIVOROUS',
+                                  'LIFE-CHANGING',
                                   textStyle: TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.w400,
@@ -107,7 +107,7 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                                 FadeAnimatedText(
-                                  'GRASS',
+                                  'USEFUL',
                                   textStyle: TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.w400,
@@ -129,7 +129,7 @@ class Home extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               height: 50,
-              width: 250,
+              width: 280,
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.white),

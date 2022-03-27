@@ -47,16 +47,36 @@ class _InsectivorousPageState extends State<InsectivorousPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 40),
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pop(MaterialPageRoute(
-                              builder: (context) => const PlantCards()));
-                        },
-                        icon: Icon(Icons.arrow_back),
-                        iconSize: 30,
-                        color: Colors.white,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: <Widget>[
+                          IconButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(MaterialPageRoute(
+                                  builder: (context) => const PlantCards()));
+                            },
+                            icon: Icon(Icons.arrow_back),
+                            iconSize: 30,
+                            color: Colors.white,
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 100,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: 350,
+                        height: 80,
+                        color: Colors.black38,
+                        child: Text(
+                          'Insectivorous',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 226, 226, 226),
+                              fontSize: 35,
+                              fontWeight: FontWeight.w600),
+                        ),
                       )
                     ],
                   ),
@@ -74,64 +94,115 @@ class _InsectivorousPageState extends State<InsectivorousPage> {
                 itemCount: insecs.length,
                 itemBuilder: (BuildContext context, int index) {
                   Insec insec = insecs[index];
-                  return Stack(
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                        height: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              width: 120,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.black),
-                              child: Stack(
-                                children: <Widget>[
-                                  Container(
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Image(
-                                        image: AssetImage(
-                                          insec.imageUrl,
-                                        ),
-                                        fit: BoxFit.cover,
-                                        height: 120,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                  return GestureDetector(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (builder) => AlertDialog(
+                          title: Text(
+                            '${insec.name}',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 30),
+                          ),
+                          content: Column(
+                            children: [
+                              Image(
+                                image: AssetImage('${insec.imageUrl}'),
                               ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '${insec.description}',
+                                style: TextStyle(
+                                    letterSpacing: 1.5,
+                                    fontStyle: FontStyle.italic,
+                                    fontSize: 20),
+                              ),
+                            ],
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: Text('Ok'),
                             ),
-                            Container(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    insec.name,
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Scientific name: \n${insec.sname}',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
                           ],
                         ),
-                      )
-                    ],
+                      );
+                    },
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                          height: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Color.fromARGB(255, 240, 239, 245),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 180, 180, 180),
+                                offset: Offset(6, 6),
+                                blurRadius: 10,
+                                spreadRadius: 1,
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                width: 120,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.black),
+                                child: Stack(
+                                  children: <Widget>[
+                                    Container(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image(
+                                          image: AssetImage(
+                                            insec.imageUrl,
+                                          ),
+                                          fit: BoxFit.cover,
+                                          height: 120,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width: 210,
+                                      child: Text(
+                                        insec.name,
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                    // Container(
+                                    //   child: Text(
+                                    //     'Scientific name: \n${insec.scientific}',
+                                    //     style: TextStyle(
+                                    //       fontSize: 20,
+                                    //       fontStyle: FontStyle.italic,
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   );
                 },
               ),

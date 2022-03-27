@@ -1,3 +1,4 @@
+import 'package:bottom_nav_ui/ui/about_page.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,7 +45,7 @@ class Settings extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CustomLicense(),
+                    builder: (context) => AboutPage(),
                   ),
                 );
               },
@@ -77,9 +78,9 @@ class Settings extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Icon(Icons.settings),
+                      Icon(Icons.info_outline),
                       Text(
-                        'Settings',
+                        'About',
                         style: TextStyle(fontSize: 20),
                       ),
                       Icon(CommunityMaterialIcons.chevron_right),

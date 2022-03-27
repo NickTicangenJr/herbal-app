@@ -134,8 +134,8 @@ class _PlantCardsState extends State<PlantCards> {
                         margin:
                             EdgeInsets.only(left: 10, right: 10, bottom: 10),
                         child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                          style: TextStyle(fontSize: 15),
+                          "A plant or plant component utilized for its aroma, flavor, or medicinal characteristics is known as an herb. One sort of dietary supplement is herbal medicine. Tablets, capsules, powders, teas, extracts, and fresh or dried plants are all available. Herbal remedies are used by people to try to maintain or enhance their health.",
+                          style: TextStyle(fontSize: 18),
                           // textAlign: TextAlign.left,
                         ),
                       ),
@@ -179,7 +179,7 @@ class _PlantCardsState extends State<PlantCards> {
                                   ),
                                   child: Image(
                                     image: AssetImage(
-                                        'assets/images/fragrant.jpg'),
+                                        'assets/fragrant/honeysuckle.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -222,8 +222,8 @@ class _PlantCardsState extends State<PlantCards> {
                         margin:
                             EdgeInsets.only(left: 10, right: 10, bottom: 10),
                         child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                          style: TextStyle(fontSize: 15),
+                          "A fragrant plant is a plant that has a pleasant scent or aroma like flowers.",
+                          style: TextStyle(fontSize: 18),
                           // textAlign: TextAlign.left,
                         ),
                       ),
@@ -312,8 +312,8 @@ class _PlantCardsState extends State<PlantCards> {
                         margin:
                             EdgeInsets.only(left: 10, right: 10, bottom: 10),
                         child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                          style: TextStyle(fontSize: 15),
+                          "A poisonous plant is one that, when touched or swallowed in large enough quantities, can cause injury or death to an organism, or any plant that can cause a toxic and/or lethal response.",
+                          style: TextStyle(fontSize: 18),
                           // textAlign: TextAlign.left,
                         ),
                       ),
@@ -401,8 +401,8 @@ class _PlantCardsState extends State<PlantCards> {
                         margin:
                             EdgeInsets.only(left: 10, right: 10, bottom: 10),
                         child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                          style: TextStyle(fontSize: 15),
+                          "Any plant that has evolved to capture and consume insects and other creatures using sophisticated pitfalls and traps is known as a carnivorous plant, sometimes known as an insectivorous plant. Carnivory has developed six times in plants, across a variety of families and orders.",
+                          style: TextStyle(fontSize: 18),
                           // textAlign: TextAlign.left,
                         ),
                       ),
@@ -411,94 +411,6 @@ class _PlantCardsState extends State<PlantCards> {
                 ),
               ),
               //=============================
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Color.fromARGB(255, 240, 239, 245),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(6, 6),
-                      blurRadius: 10,
-                      spreadRadius: 1,
-                    ),
-                  ],
-                ),
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        // color: Colors.black,
-                        child: Stack(
-                          children: <Widget>[
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        InsectivorousPage()));
-                              },
-                              child: Container(
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                  child: Image(
-                                    image:
-                                        AssetImage('assets/images/cyndon.jpg'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    CommunityMaterialIcons.grass,
-                                    color: Color(0xffD16BA5),
-                                    size: 20,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.all(5),
-                                    child: Text(
-                                      'Grass',
-                                      style: TextStyle(
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.w600,
-                                          letterSpacing: 2),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        margin:
-                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                        child: Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                          style: TextStyle(fontSize: 15),
-                          // textAlign: TextAlign.left,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ],
           ),
         ),

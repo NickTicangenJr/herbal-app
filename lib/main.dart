@@ -1,8 +1,8 @@
+import 'package:bottom_nav_ui/ui/about_page.dart';
 import 'package:bottom_nav_ui/ui/favourite.dart';
 import 'package:bottom_nav_ui/ui/home.dart';
 import 'package:bottom_nav_ui/ui/image_scanner.dart';
 import 'package:bottom_nav_ui/ui/plant_cards.dart';
-import 'package:bottom_nav_ui/ui/sample.dart';
 import 'package:bottom_nav_ui/ui/settings.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class _LandingState extends State<Landing> {
   int index = 0;
   final screens = [
     Home(),
-    Favourite(),
+    // Favourite(),
     ImageScanner(),
     PlantCards(),
     Settings(),
@@ -33,10 +33,10 @@ class _LandingState extends State<Landing> {
   Widget build(BuildContext context) {
     final items = <Widget>[
       Icon(Icons.home_outlined, size: 30),
-      Icon(Icons.favorite_outline, size: 30),
+      // Icon(Icons.favorite_outline, size: 30),
       Icon(CommunityMaterialIcons.scan_helper, size: 30),
       Icon(CommunityMaterialIcons.flower_tulip_outline, size: 30),
-      Icon(CommunityMaterialIcons.menu, size: 30),
+      Icon(CommunityMaterialIcons.cog_outline, size: 30),
     ];
     return Scaffold(
       extendBody: true,

@@ -22,61 +22,61 @@ class _ImageScannerState extends State<ImageScanner> {
   bool loading = true;
   File? file;
   var output;
-  var label;
-  var use;
+  // var label;
+  // var use;
   ImagePicker image = ImagePicker();
-  var medecine = {
-    "Abukado": "Gamot",
-    "Alagaw": "Gamot",
-    "Aloe vera": "Anti inflamatory",
-    "Amarillo": "Gamot",
-    "Ampalaya": "Gamot",
-    "Atis": "Gamot",
-    "Balanoy": "Gamot",
-    "Balbas pusa": "Gamot",
-    "Balete": "Gamot",
-    "Balimbing": "Gamot",
-    "Bawang": "Gamot",
-    "Bayabas": "Gamot",
-    "Buyo": "Gamot",
-    "Cacao": "Gamot",
-    "Comfrey": "Gamot",
-    "Dalandan": "Gamot",
-    "Ganoderma": "Gamot",
-    "Gumamela": "Gamot",
-    "Guyabano": "Gamot",
-    "Ipil-ipil": "Gamot",
-    "Kalatsutsi": "Gamot",
-    "Kamatigi": "Gamot",
-    "Kamias": "Gamot",
-    "Kampanilya": "Gamot",
-    "Karot": "Gamot",
-    "Kataka-taka": "Gamot",
-    "Luyang dilaw": "Gamot",
-    "Mangostin": "Gamot",
-    "Mais": "Gamot",
-    "Makahiya": "Gamot",
-    "Malunggay": "Gamot",
-    "Mayana": "Gamot",
-    "Methi": "Gamot",
-    "Mint": "Gamot",
-    "Nim": "Gamot",
-    "Niyog-niyogan": "Gamot",
-    "Okra": "Gamot",
-    "Pandakiki-puti": "Gamot",
-    "Pandan": "Gamot",
-    "Rabanus": "Gamot",
-    "Repolyo": "Gamot",
-    "Romero": "Gamot",
-    "Saging": "Gamot",
-    "Sampalok": "Gamot",
-    "Sili": "Gamot",
-    "Takip-kuhol": "Gamot",
-    "Talong": "Gamot",
-    "Tanglad": "Gamot",
-    "Tawa tawa": "Gamot",
-    "Tsaang gubat": "Gamot",
-  };
+  // var medecine = {
+  //   "Abukado": "Gamot",
+  //   "Alagaw": "Gamot",
+  //   "Aloe vera": "Anti inflamatory",
+  //   "Amarillo": "Gamot",
+  //   "Ampalaya": "Gamot",
+  //   "Atis": "Gamot",
+  //   "Balanoy": "Gamot",
+  //   "Balbas pusa": "Gamot",
+  //   "Balete": "Gamot",
+  //   "Balimbing": "Gamot",
+  //   "Bawang": "Gamot",
+  //   "Bayabas": "Gamot",
+  //   "Buyo": "Gamot",
+  //   "Cacao": "Gamot",
+  //   "Comfrey": "Gamot",
+  //   "Dalandan": "Gamot",
+  //   "Ganoderma": "Gamot",
+  //   "Gumamela": "Gamot",
+  //   "Guyabano": "Gamot",
+  //   "Ipil-ipil": "Gamot",
+  //   "Kalatsutsi": "Gamot",
+  //   "Kamatigi": "Gamot",
+  //   "Kamias": "Gamot",
+  //   "Kampanilya": "Gamot",
+  //   "Karot": "Gamot",
+  //   "Kataka-taka": "Gamot",
+  //   "Luyang dilaw": "Gamot",
+  //   "Mangostin": "Gamot",
+  //   "Mais": "Gamot",
+  //   "Makahiya": "Gamot",
+  //   "Malunggay": "Gamot",
+  //   "Mayana": "Gamot",
+  //   "Methi": "Gamot",
+  //   "Mint": "Gamot",
+  //   "Nim": "Gamot",
+  //   "Niyog-niyogan": "Gamot",
+  //   "Okra": "Gamot",
+  //   "Pandakiki-puti": "Gamot",
+  //   "Pandan": "Gamot",
+  //   "Rabanus": "Gamot",
+  //   "Repolyo": "Gamot",
+  //   "Romero": "Gamot",
+  //   "Saging": "Gamot",
+  //   "Sampalok": "Gamot",
+  //   "Sili": "Gamot",
+  //   "Takip-kuhol": "Gamot",
+  //   "Talong": "Gamot",
+  //   "Tanglad": "Gamot",
+  //   "Tawa tawa": "Gamot",
+  //   "Tsaang gubat": "Gamot",
+  // };
 
   @override
   void initState() {
@@ -104,8 +104,8 @@ class _ImageScannerState extends State<ImageScanner> {
 
     setState(() {
       output = prediction;
-      label = (output![0]['label']).toString().substring(2);
-      use = medecine[label];
+      // label = (output![0]['label']).toString().substring(2);
+      // use = medecine[label];
       loading = false;
     });
   }
@@ -217,56 +217,62 @@ class _ImageScannerState extends State<ImageScanner> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    // 'Result: ' +
-                                    (output![0]['label'])
-                                        .toString()
-                                        .substring(2),
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 92, 92, 92),
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                  Text(
-                                    ' ( ' +
-                                        ((output![0]['confidence'] as double) *
-                                                100)
-                                            .toStringAsFixed(0) +
-                                        "% )",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromARGB(255, 92, 92, 92),
-                                    ),
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Medecinal use: ',
-                                    style: TextStyle(
-                                      fontStyle: FontStyle.italic,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromARGB(255, 92, 92, 92),
+                                  Container(
+                                    child: Text(
+                                      ' ( ' +
+                                          ((output![0]['confidence']
+                                                      as double) *
+                                                  100)
+                                              .toStringAsFixed(0) +
+                                          "% )",
+                                      style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.green,
+                                      ),
+                                      textAlign: TextAlign.left,
                                     ),
                                   ),
-                                  Text(
-                                    use.toString(),
-                                    // print(use),
-                                    style: TextStyle(
-                                      fontStyle: FontStyle.italic,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromARGB(255, 92, 92, 92),
+                                  Container(
+                                    width: 250,
+                                    child: Text(
+                                      // 'Result: ' +
+                                      (output![0]['label'])
+                                          .toString()
+                                          .substring(2),
+                                      style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromARGB(255, 92, 92, 92),
+                                      ),
+                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ],
                               ),
+                              // Row(
+                              //   children: [
+                              //     Text(
+                              //       'Medecinal use: ',
+                              //       style: TextStyle(
+                              //         fontStyle: FontStyle.italic,
+                              //         fontSize: 15,
+                              //         fontWeight: FontWeight.w400,
+                              //         color: Color.fromARGB(255, 92, 92, 92),
+                              //       ),
+                              //     ),
+                              //     // Text(
+                              //     //   use.toString(),
+                              //     //   // print(use),
+                              //     //   style: TextStyle(
+                              //     //     fontStyle: FontStyle.italic,
+                              //     //     fontSize: 20,
+                              //     //     fontWeight: FontWeight.w400,
+                              //     //     color: Color.fromARGB(255, 92, 92, 92),
+                              //     //   ),
+                              //     // ),
+                              //   ],
+                              // ),
                             ],
                           ),
                         ),
@@ -274,7 +280,7 @@ class _ImageScannerState extends State<ImageScanner> {
                     ),
                   ),
             SizedBox(
-              height: 70,
+              height: 20,
             ),
             Stack(
               // child: Column(
