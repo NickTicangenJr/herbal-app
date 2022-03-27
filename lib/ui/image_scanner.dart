@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
+import 'package:logger/logger.dart';
 import 'package:tflite/tflite.dart';
 // import 'package:tflite/tflite.dart';
 
@@ -139,6 +140,8 @@ class _ImageScannerState extends State<ImageScanner> {
     detectimage(file!);
   }
 
+  final log = Logger();
+
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
@@ -254,7 +257,7 @@ class _ImageScannerState extends State<ImageScanner> {
                                   ),
                                   Text(
                                     use.toString(),
-                                    // use,
+                                    // print(use),
                                     style: TextStyle(
                                       fontStyle: FontStyle.italic,
                                       fontSize: 20,
@@ -278,6 +281,9 @@ class _ImageScannerState extends State<ImageScanner> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
+                    // IconButton(
+                    //     onPressed: () => debugPrint(use),
+                    //     icon: Icon(Icons.ac_unit_outlined)),
                     Align(
                       // alignment: Alignment(-0.5, 0.8),
                       child: GestureDetector(
@@ -330,6 +336,7 @@ class _ImageScannerState extends State<ImageScanner> {
                     ),
                     Align(
                       child: GestureDetector(
+                        // onTap: log.v('use'),
                         onTap: getImageFromGallery,
                         child: Container(
                           height: 40,

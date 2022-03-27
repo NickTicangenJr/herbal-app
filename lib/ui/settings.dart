@@ -210,7 +210,7 @@ class _CustomLicenseState extends State<CustomLicense> {
             padding: EdgeInsets.all(8.0),
             child: Image.asset(
               'assets/icons/ic_icon.png',
-              width: 58,
+              width: 60,
             ),
           ),
           applicationVersion: '0.0.1',

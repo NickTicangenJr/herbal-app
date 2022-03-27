@@ -47,22 +47,28 @@ class _PlantCardsState extends State<PlantCards> {
         elevation: 10,
         centerTitle: true,
       ),
-      body: Container(
-        // color: Color.fromARGB(255, 240, 239, 245),
-        // height: 400,
-        // margin: EdgeInsets.only(top: 25),
-        // color: Colors.blue,
-        child: Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1, mainAxisSpacing: 30, crossAxisSpacing: 10),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(right: 20, top: 20, left: 20, bottom: 100),
+          child: Column(
+            // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //     crossAxisCount: 1, mainAxisSpacing: 30, crossAxisSpacing: 10),
             children: [
               //=======//=======//=======//=======//=======//=======//=======
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 240, 239, 245),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(6, 6),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -101,19 +107,22 @@ class _PlantCardsState extends State<PlantCards> {
                               child: Row(
                                 children: [
                                   Icon(
-                                    CommunityMaterialIcons.flower_poppy,
+                                    CommunityMaterialIcons.sprout_outline,
                                     color: Color(0xffD16BA5),
-                                    size: 35,
+                                    size: 20,
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text(
-                                    'Herbal',
-                                    style: TextStyle(
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 2),
+                                  Container(
+                                    margin: EdgeInsets.all(5),
+                                    child: Text(
+                                      'Herbal',
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 2),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -121,10 +130,14 @@ class _PlantCardsState extends State<PlantCards> {
                           ],
                         ),
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: TextStyle(fontSize: 15),
-                        // textAlign: TextAlign.left,
+                      Container(
+                        margin:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: TextStyle(fontSize: 15),
+                          // textAlign: TextAlign.left,
+                        ),
                       ),
                     ],
                   ),
@@ -132,9 +145,19 @@ class _PlantCardsState extends State<PlantCards> {
               ),
               //=======//=======//=======//=======//=======//=======//=======
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 240, 239, 245),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(6, 6),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Container(
                   child: Column(
                     children: <Widget>[
@@ -172,20 +195,22 @@ class _PlantCardsState extends State<PlantCards> {
                             Container(
                               child: Row(
                                 children: [
-                                  Icon(
-                                    CommunityMaterialIcons.flower_poppy,
+                                  Image(
+                                    image: AssetImage('assets/icons/aroma.png'),
                                     color: Color(0xffD16BA5),
-                                    size: 35,
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text(
-                                    'Fragrant',
-                                    style: TextStyle(
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 2),
+                                  Container(
+                                    margin: EdgeInsets.all(5),
+                                    child: Text(
+                                      'Fragrant',
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 2),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -193,10 +218,14 @@ class _PlantCardsState extends State<PlantCards> {
                           ],
                         ),
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: TextStyle(fontSize: 15),
-                        // textAlign: TextAlign.left,
+                      Container(
+                        margin:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: TextStyle(fontSize: 15),
+                          // textAlign: TextAlign.left,
+                        ),
                       ),
                     ],
                   ),
@@ -205,9 +234,19 @@ class _PlantCardsState extends State<PlantCards> {
 
               //=======//=======//=======//=======//=======//=======//=======
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 240, 239, 245),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(6, 6),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Container(
                   child: Column(
                     children: <Widget>[
@@ -246,19 +285,22 @@ class _PlantCardsState extends State<PlantCards> {
                               child: Row(
                                 children: [
                                   Icon(
-                                    CommunityMaterialIcons.flower_poppy,
+                                    CommunityMaterialIcons.skull_crossbones,
                                     color: Color(0xffD16BA5),
-                                    size: 35,
+                                    size: 20,
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text(
-                                    'Poisonus',
-                                    style: TextStyle(
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 2),
+                                  Container(
+                                    margin: EdgeInsets.all(5),
+                                    child: Text(
+                                      'Poisonus',
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 2),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -266,10 +308,14 @@ class _PlantCardsState extends State<PlantCards> {
                           ],
                         ),
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: TextStyle(fontSize: 15),
-                        // textAlign: TextAlign.left,
+                      Container(
+                        margin:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: TextStyle(fontSize: 15),
+                          // textAlign: TextAlign.left,
+                        ),
                       ),
                     ],
                   ),
@@ -277,9 +323,19 @@ class _PlantCardsState extends State<PlantCards> {
               ),
               //=======//=======//=======//=======//=======//=======//=======
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 240, 239, 245),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(6, 6),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Container(
                   child: Column(
                     children: <Widget>[
@@ -318,19 +374,22 @@ class _PlantCardsState extends State<PlantCards> {
                               child: Row(
                                 children: [
                                   Icon(
-                                    CommunityMaterialIcons.flower_poppy,
+                                    CommunityMaterialIcons.barley,
                                     color: Color(0xffD16BA5),
-                                    size: 35,
+                                    size: 20,
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text(
-                                    'Insectivorous',
-                                    style: TextStyle(
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 2),
+                                  Container(
+                                    margin: EdgeInsets.all(5),
+                                    child: Text(
+                                      'Insectivorous',
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 2),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -338,10 +397,14 @@ class _PlantCardsState extends State<PlantCards> {
                           ],
                         ),
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: TextStyle(fontSize: 15),
-                        // textAlign: TextAlign.left,
+                      Container(
+                        margin:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: TextStyle(fontSize: 15),
+                          // textAlign: TextAlign.left,
+                        ),
                       ),
                     ],
                   ),
@@ -349,9 +412,19 @@ class _PlantCardsState extends State<PlantCards> {
               ),
               //=============================
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.white),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 240, 239, 245),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(6, 6),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
                 child: Container(
                   child: Column(
                     children: <Widget>[
@@ -390,19 +463,22 @@ class _PlantCardsState extends State<PlantCards> {
                               child: Row(
                                 children: [
                                   Icon(
-                                    CommunityMaterialIcons.flower_poppy,
+                                    CommunityMaterialIcons.grass,
                                     color: Color(0xffD16BA5),
-                                    size: 35,
+                                    size: 20,
                                   ),
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text(
-                                    'Grass',
-                                    style: TextStyle(
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 2),
+                                  Container(
+                                    margin: EdgeInsets.all(5),
+                                    child: Text(
+                                      'Grass',
+                                      style: TextStyle(
+                                          fontSize: 35,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 2),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -410,10 +486,14 @@ class _PlantCardsState extends State<PlantCards> {
                           ],
                         ),
                       ),
-                      Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                        style: TextStyle(fontSize: 15),
-                        // textAlign: TextAlign.left,
+                      Container(
+                        margin:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                          style: TextStyle(fontSize: 15),
+                          // textAlign: TextAlign.left,
+                        ),
                       ),
                     ],
                   ),

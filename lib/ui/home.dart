@@ -127,17 +127,21 @@ class Home extends StatelessWidget {
               ),
             ),
             Container(
+              alignment: Alignment.center,
+              height: 50,
+              width: 250,
+              margin: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15), color: Colors.white),
               child: Text(
                 'DID YOU KNOW?',
                 style: GoogleFonts.fredokaOne(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 1,
-                    color: Colors.black),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 1,
+                  color: Color(0xff86A8E7),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
             ),
             Center(
               child: WidgetMask(
@@ -145,25 +149,53 @@ class Home extends StatelessWidget {
                 childSaveLayer: true,
                 mask: Image.asset(
                   say.imageUrl,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                   alignment: Alignment.topCenter,
                 ),
                 child: Image.asset(
-                  'assets/images/mask.png',
+                  'assets/images/masker.png',
+                  height: 300,
                 ),
               ),
             ),
+
             Container(
               alignment: Alignment.center,
               height: 300,
               width: 350,
               decoration: BoxDecoration(
-                color: Color(0xff86A8E7).withOpacity(0.3),
-                borderRadius: BorderRadius.circular(15),
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xff5FFBF1),
+                    Color(0xff86A8E7),
+                    Color(0xffD16BA5),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(20),
               ),
-              child: Text(
-                'Avocado - A good source of vitamins A, some B, C and E, potassium (higher than bananas) and fiber ; fair source of iron; low in calcium. A fruit with high-energy producing value, each edible pound allegedly provides an average of 1,000 calories.',
-                style: TextStyle(fontSize: 20),
+              child: Container(
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      say.name,
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    Text(
+                      '" ${say.sname} "',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white70),
+                    ),
+                  ],
+                ),
               ),
             ),
             // Container(
