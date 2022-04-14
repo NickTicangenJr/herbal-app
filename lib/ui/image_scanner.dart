@@ -1,6 +1,8 @@
 // import 'dart:ffi';
 import 'dart:io';
 
+import 'package:bottom_nav_ui/models/herb_data_model.dart';
+import 'package:bottom_nav_ui/models/herb_instruction_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:flutter/services.dart';
@@ -175,14 +177,14 @@ class _ImageScannerState extends State<ImageScanner> {
           children: <Widget>[
             loading == true
                 ? Container(
-                    height: 350,
-                    width: 350,
+                    height: 300,
+                    width: 300,
                     color: Color.fromARGB(255, 255, 255, 255),
                     margin: EdgeInsets.only(top: 30),
                     child: Center(child: Text("No image selected")),
                   )
                 : Container(
-                    width: 350,
+                    width: 300,
                     margin: EdgeInsets.only(top: 30),
                     color: Color.fromARGB(255, 255, 255, 255),
 
@@ -200,8 +202,8 @@ class _ImageScannerState extends State<ImageScanner> {
                     child: Column(
                       children: [
                         Container(
-                          height: 350,
-                          width: 350,
+                          height: 300,
+                          width: 300,
                           child: Image.file(
                             file!,
                             fit: BoxFit.cover,
@@ -226,7 +228,7 @@ class _ImageScannerState extends State<ImageScanner> {
                                               .toStringAsFixed(0) +
                                           "% )",
                                       style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.w400,
                                         color: Colors.green,
                                       ),
@@ -241,7 +243,7 @@ class _ImageScannerState extends State<ImageScanner> {
                                           .toString()
                                           .substring(2),
                                       style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                         color: Color.fromARGB(255, 92, 92, 92),
                                       ),
@@ -250,29 +252,6 @@ class _ImageScannerState extends State<ImageScanner> {
                                   ),
                                 ],
                               ),
-                              // Row(
-                              //   children: [
-                              //     Text(
-                              //       'Medecinal use: ',
-                              //       style: TextStyle(
-                              //         fontStyle: FontStyle.italic,
-                              //         fontSize: 15,
-                              //         fontWeight: FontWeight.w400,
-                              //         color: Color.fromARGB(255, 92, 92, 92),
-                              //       ),
-                              //     ),
-                              //     // Text(
-                              //     //   use.toString(),
-                              //     //   // print(use),
-                              //     //   style: TextStyle(
-                              //     //     fontStyle: FontStyle.italic,
-                              //     //     fontSize: 20,
-                              //     //     fontWeight: FontWeight.w400,
-                              //     //     color: Color.fromARGB(255, 92, 92, 92),
-                              //     //   ),
-                              //     // ),
-                              //   ],
-                              // ),
                             ],
                           ),
                         ),
@@ -280,12 +259,13 @@ class _ImageScannerState extends State<ImageScanner> {
                     ),
                   ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Stack(
               // child: Column(
               children: <Widget>[
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     // IconButton(
                     //     onPressed: () => debugPrint(use),
@@ -296,7 +276,7 @@ class _ImageScannerState extends State<ImageScanner> {
                         onTap: getImageFromCamera,
                         child: Container(
                           height: 40,
-                          width: 200,
+                          width: 150,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -337,16 +317,13 @@ class _ImageScannerState extends State<ImageScanner> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 25,
-                    ),
                     Align(
                       child: GestureDetector(
                         // onTap: log.v('use'),
                         onTap: getImageFromGallery,
                         child: Container(
                           height: 40,
-                          width: 200,
+                          width: 150,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -392,38 +369,142 @@ class _ImageScannerState extends State<ImageScanner> {
                 ),
               ],
               // ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            // Search bar insert here
+            //Listview info here
+            Expanded(
+              child: ListView.builder(
+                itemCount: instructions.length,
+                itemBuilder: (BuildContext context, int index) {
+                  Instruction instruction = instructions[index];
+                  // Fragrant fragrant = widget.plant.fragrants[index];
+                  return GestureDetector(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (builder) => AlertDialog(
+                          title: Text(
+                            '${instruction.name}',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 30),
+                          ),
+                          content: SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                Image(
+                                  image: AssetImage('${instruction.imageUrl}'),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'How to Use: \n${instruction.usage}',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  'Limitations: \n${instruction.limitation}',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                Text(
+                                  'Disclaimer: \n${instruction.warning}',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Colors.red,
+                                      fontStyle: FontStyle.italic),
+                                ),
+                              ],
+                            ),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: Text('I understand'),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                          height: 60,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Color.fromARGB(255, 240, 239, 245),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color.fromARGB(255, 180, 180, 180),
+                                offset: Offset(6, 6),
+                                blurRadius: 10,
+                                spreadRadius: 1,
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.black),
+                                child: Stack(
+                                  children: <Widget>[
+                                    Container(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image(
+                                          image: AssetImage(
+                                            instruction.imageUrl,
+                                          ),
+                                          fit: BoxFit.cover,
+                                          height: 60,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(8),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      width: 210,
+                                      child: Text(
+                                        instruction.name,
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                    // Text(
+                                    //   'Description: \n${activity.description}',
+                                    //   style: TextStyle(
+                                    //     fontSize: 12,
+                                    //     fontWeight: FontWeight.w600,
+                                    //     color: Colors.grey,
+                                    //   ),
+                                    // ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
             )
-
-            // Stack(
-            //   children: [
-            //     Align(
-            //       alignment: Alignment(-0.5, 0.8),
-            //       child: MaterialButton(
-            //         elevation: 10.0,
-            //         child: new Icon(
-            //           CommunityMaterialIcons.image,
-            //           color: Colors.white,
-            //           size: 35,
-            //         ),
-            //         color: Color.fromARGB(255, 25, 209, 169),
-            //         onPressed: getImageFromGallery,
-            //       ),
-            //     ),
-            //     Align(
-            //       alignment: Alignment(0.5, 0.8),
-            //       child: MaterialButton(
-            //         elevation: 0.0,
-            //         child: new Icon(
-            //           CommunityMaterialIcons.camera_plus_outline,
-            //           size: 35,
-            //           color: Colors.white,
-            //         ),
-            //         color: Color.fromARGB(255, 25, 209, 169),
-            //         onPressed: getImageFromCamera,
-            //       ),
-            //     ),
-            //   ],
-            // )
           ],
         ),
       ),

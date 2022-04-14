@@ -1,6 +1,6 @@
 0 Abukado(Lower cholesterol levels)
 1 Alagaw(Loosen phlegm and relieve coughs)
-2 Aloe vera(Anti inflamatory)
+2 Aloe vera
 3 Amarillo(for treatment of indigestion, colic, severe constipation)
 4 Ampalaya(Leaf juice is supposedly a good antitussive)
 5 Atis(Helps to manage cough and cold due to its Ushna)
@@ -9,7 +9,7 @@
 8 Balete(As dressings for wounds, cure for headaches.)
 9 Balimbing(Supports the immune system in its daily functions)
 10 Bawang(To treat arthritis, toothache, chronic cough, constipation)
-11 Bayabas(Guava leaf for stomach and intestinal conditions, pain, diabetes, and wound healing.)
+11 Bayabas
 12 Buyo(Source of antioxidant that fights oxidative stress by scavenging free radicals.)
 13 Cacao(For diarrhea, asthma, bronchitis, and as an expectorant for lung congestion.)
 14 Comfrey(treating wounds, skin ulcers, thrombophlebitis, bruises, and sprains and strains.)
