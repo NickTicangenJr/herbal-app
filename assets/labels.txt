@@ -1,50 +1,50 @@
-0 Abukado(Lower cholesterol levels)
-1 Alagaw(Loosen phlegm and relieve coughs)
-2 Aloe vera
-3 Amarillo(for treatment of indigestion, colic, severe constipation)
-4 Ampalaya(Leaf juice is supposedly a good antitussive)
-5 Atis(Helps to manage cough and cold due to its Ushna)
-6 Balanoy(Decoction of leaves also used for hiccups, vomiting and nausea)
-7 Balbas pusa(To treat renal inflammation, kidney stones, and dysuria.)
-8 Balete(As dressings for wounds, cure for headaches.)
-9 Balimbing(Supports the immune system in its daily functions)
-10 Bawang(To treat arthritis, toothache, chronic cough, constipation)
-11 Bayabas
-12 Buyo(Source of antioxidant that fights oxidative stress by scavenging free radicals.)
-13 Cacao(For diarrhea, asthma, bronchitis, and as an expectorant for lung congestion.)
-14 Comfrey(treating wounds, skin ulcers, thrombophlebitis, bruises, and sprains and strains.)
-15 Dalandan(Used to relieve nausea and vomiting.)
-16 Ganoderma(Increases T-cell activity and is a treatment for viral hepatitis.)
-17 Gumamela(Used to treat headaches, boils, swelling, abscesses and mumps.)
-18 Guyabano(It helps lower fever, spasms, heart rate, and blood pressure.)
-19 Ipil-ipil(Used for Intestinal parasitism: ascaris and trichinosis.)
-20 Kalatsutsi(Used as purgative, remedy for pain, fever, diarrhoea and cure for itch.)
-21 Kamatigi(Used as poultice to dissolve whitlow.)
-22 Kamias(Relieve coughing, thrush, hemorrhoids, stings, itches, pimples and skin eruptions.)
-23 Kampanilya(Decoction of leaves in small doses used as antidote for poisoning.)
-24 Karot(Carrot root is used for Vitamin A deficiency.)
-25 Kataka-taka(Antiseptic, and counter-irritant against poisonous insect bites.)
-26 Luyang dilaw(Helps Ease Arthritic Pain and Other Body Pain. It Boosts the Immune System)
-27 Mangostin(Used for diarrhea.)
-28 Mais(Used for corn ethanol)
-29 Makahiya(Roots used as diuretic; also used for dysentery and dysmenorrhea.)
-30 Malunggay(Reduce swelling, as an antioxidant, to prevent spasms)
-31 Mayana(Used for pain, sore, swelling and cuts)
-32 Methi(Used as a remedy for stomach disorders, constipation)
-33 Mint(Remedy for digestive problems.)
-34 Neem(Neem leaf is used for leprosy, eye disorders, bloody nose, intestinal worms)
-35 Niyog-niyogan(Remedy for headaches)
-36 Okra(Reduce the risk of like cancer, diabetes, stroke, and heart disease.)
-37 Pandakiki-puti(To relieve head, chest and pelvic congestion)
-38 Pandan(pain relief, especially arthritis and joint pain)
-39 Rabanus(Rich in antioxidants and minerals like calcium and potassium)
-40 Repolyo(Contains antioxidants that may help reduce inflammation.)
-41 Romero(Boost the immune system and improve blood circulation.)
-42 Saging(Used to treat biliousness and heartburn.)
-43 Sampalok(Leaves used to inflammatory swellings of ankles and joints. )
-44 Sili(Antihyperglycemic/Anti-diabetic.)
-45 Takip-kuhol(Improve memory and mental function)
-46 Talong(Crushed leaves are used to sooth inflamed hemorrhoids.)
-47 Tanglad(Treating digestive tract spasms)
-48 Tawa tawa(For the treatment of dengue.)
-49 Tsaang gubat(Anti-spasmodic, mouthwash and body cleanser)
+0 Avocado/Abukado
+1 Premna Odorata/ Alagaw
+2 Aloe Vera/ Sabila
+3 Marigold/Amarilyo
+4 Ampalaya/Bitter gourd
+5 Sugar Apple/Atis
+6 Basil/Balanoy
+7 Cat’s whisker/Balbasa pusa
+8 Rubber Tree/Balete
+9 Starfruil or Turncoat/Balimbing
+10 Garlic/Bawang
+11 Guava/Bayabas
+12 Betel Leaf/Buyo
+13 Cacao/Kakaw
+14 Comfrey/Komprey
+15 Orange/Dalandan
+16 Reishi Mushroom/Ganoderma
+17 Hibiscus/Gumamela
+18 Soursop/Guyabano
+19 Lead Tree/Ipil Ipil
+20 Frangipani/Kalachuchi
+21 Balsam/Kamantigui
+22 Tree Sorrel/Kamias
+23 Yellow Bell/Kampanilya
+24 Carrot/Karot
+25 Cathedral Bells/Kataka taka
+26 Turmeric/Luyang Dilaw
+27 Mangosteen/Mangostan
+28 Corn/Mais
+29 Mimosa Piduca/Makahiya
+30 Drumstick Tree/Malunggay
+31 Butterfly coleus/Mayana
+32 Fungreek/Methi
+33 Mint/Yerba Buena
+34 Neem Tree/Nim
+35 Palm Leaf/Niyog niyogan
+36 Lady’s Finger/Okra
+37 Banana Bush/Pandakaki
+38 Fragrant Screwpine/Pandan
+39 Radish/Labanos
+40 Cabbage/Repolyo
+41 Rosemary/Romero
+42 Banana/Saging
+43 Tamarind/Sampalok
+44 Pepper/Sili
+45 Pennyworth/Takip kuhol
+46 Eggplant/Talong
+47 Lemmongrass/Tanglad
+48 Asthma Plant/Tawa–tawa
+49 TForest Tea/Tsaang gubat

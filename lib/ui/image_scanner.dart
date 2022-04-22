@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:bottom_nav_ui/models/herb_data_model.dart';
 import 'package:bottom_nav_ui/models/herb_instruction_model.dart';
+import 'package:bottom_nav_ui/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:flutter/services.dart';
@@ -21,64 +22,15 @@ class ImageScanner extends StatefulWidget {
 }
 
 class _ImageScannerState extends State<ImageScanner> {
+  final controller = TextEditingController();
+  List<Instruction> allinstruct = instructions;
+
   bool loading = true;
   File? file;
   var output;
   // var label;
   // var use;
   ImagePicker image = ImagePicker();
-  // var medecine = {
-  //   "Abukado": "Gamot",
-  //   "Alagaw": "Gamot",
-  //   "Aloe vera": "Anti inflamatory",
-  //   "Amarillo": "Gamot",
-  //   "Ampalaya": "Gamot",
-  //   "Atis": "Gamot",
-  //   "Balanoy": "Gamot",
-  //   "Balbas pusa": "Gamot",
-  //   "Balete": "Gamot",
-  //   "Balimbing": "Gamot",
-  //   "Bawang": "Gamot",
-  //   "Bayabas": "Gamot",
-  //   "Buyo": "Gamot",
-  //   "Cacao": "Gamot",
-  //   "Comfrey": "Gamot",
-  //   "Dalandan": "Gamot",
-  //   "Ganoderma": "Gamot",
-  //   "Gumamela": "Gamot",
-  //   "Guyabano": "Gamot",
-  //   "Ipil-ipil": "Gamot",
-  //   "Kalatsutsi": "Gamot",
-  //   "Kamatigi": "Gamot",
-  //   "Kamias": "Gamot",
-  //   "Kampanilya": "Gamot",
-  //   "Karot": "Gamot",
-  //   "Kataka-taka": "Gamot",
-  //   "Luyang dilaw": "Gamot",
-  //   "Mangostin": "Gamot",
-  //   "Mais": "Gamot",
-  //   "Makahiya": "Gamot",
-  //   "Malunggay": "Gamot",
-  //   "Mayana": "Gamot",
-  //   "Methi": "Gamot",
-  //   "Mint": "Gamot",
-  //   "Nim": "Gamot",
-  //   "Niyog-niyogan": "Gamot",
-  //   "Okra": "Gamot",
-  //   "Pandakiki-puti": "Gamot",
-  //   "Pandan": "Gamot",
-  //   "Rabanus": "Gamot",
-  //   "Repolyo": "Gamot",
-  //   "Romero": "Gamot",
-  //   "Saging": "Gamot",
-  //   "Sampalok": "Gamot",
-  //   "Sili": "Gamot",
-  //   "Takip-kuhol": "Gamot",
-  //   "Talong": "Gamot",
-  //   "Tanglad": "Gamot",
-  //   "Tawa tawa": "Gamot",
-  //   "Tsaang gubat": "Gamot",
-  // };
 
   @override
   void initState() {
@@ -177,40 +129,28 @@ class _ImageScannerState extends State<ImageScanner> {
           children: <Widget>[
             loading == true
                 ? Container(
-                    height: 300,
-                    width: 300,
+                    height: 270,
+                    width: 350,
                     color: Color.fromARGB(255, 255, 255, 255),
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 10),
                     child: Center(child: Text("No image selected")),
                   )
                 : Container(
-                    width: 300,
-                    margin: EdgeInsets.only(top: 30),
+                    width: 350,
+                    margin: EdgeInsets.only(top: 10),
                     color: Color.fromARGB(255, 255, 255, 255),
-
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(10),
-                    //   // boxShadow: [
-                    //   //   BoxShadow(
-                    //   //     color: Colors.grey.withOpacity(0.5),
-                    //   //     spreadRadius: 5,
-                    //   //     blurRadius: 7,
-                    //   //     offset: Offset(0, 3), // changes position of shadow
-                    //   //   ),
-                    //   // ],
-                    // ),
                     child: Column(
                       children: [
                         Container(
-                          height: 300,
-                          width: 300,
+                          height: 270,
+                          width: 350,
                           child: Image.file(
                             file!,
                             fit: BoxFit.cover,
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 255, 255, 255),
                           ),
@@ -236,7 +176,6 @@ class _ImageScannerState extends State<ImageScanner> {
                                     ),
                                   ),
                                   Container(
-                                    width: 250,
                                     child: Text(
                                       // 'Result: ' +
                                       (output![0]['label'])
@@ -247,7 +186,7 @@ class _ImageScannerState extends State<ImageScanner> {
                                         fontWeight: FontWeight.bold,
                                         color: Color.fromARGB(255, 92, 92, 92),
                                       ),
-                                      textAlign: TextAlign.center,
+                                      textAlign: TextAlign.left,
                                     ),
                                   ),
                                 ],
@@ -259,7 +198,7 @@ class _ImageScannerState extends State<ImageScanner> {
                     ),
                   ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Stack(
               // child: Column(
@@ -371,16 +310,31 @@ class _ImageScannerState extends State<ImageScanner> {
               // ),
             ),
             SizedBox(
-              height: 50,
+              height: 10,
             ),
+
             // Search bar insert here
+            Container(
+              margin: EdgeInsets.all(12),
+              child: TextField(
+                controller: controller,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'Search for herbal information here',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25),
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+                onChanged: searchHerbal,
+              ),
+            ),
             //Listview info here
             Expanded(
               child: ListView.builder(
-                itemCount: instructions.length,
-                itemBuilder: (BuildContext context, int index) {
-                  Instruction instruction = instructions[index];
-                  // Fragrant fragrant = widget.plant.fragrants[index];
+                itemCount: allinstruct.length,
+                itemBuilder: (context, index) {
+                  final instruction = allinstruct[index];
                   return GestureDetector(
                     onTap: () {
                       showDialog(
@@ -401,20 +355,24 @@ class _ImageScannerState extends State<ImageScanner> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'How to Use: \n${instruction.usage}',
+                                  'How to Use:\n  ${instruction.usage}\n\nLimitations:\n  ${instruction.limitation}',
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 SizedBox(
                                   height: 20,
                                 ),
-                                Text(
-                                  'Limitations: \n${instruction.limitation}',
-                                  style: TextStyle(fontSize: 18),
+                                // Text(
+                                //   'Limitations: \n${instruction.limitation}',
+                                //   textAlign: TextAlign.left,
+                                //   style: TextStyle(fontSize: 18),
+                                // ),
+                                SizedBox(
+                                  height: 20,
                                 ),
                                 Text(
                                   'Disclaimer: \n${instruction.warning}',
                                   style: TextStyle(
-                                      fontSize: 10,
+                                      fontSize: 13,
                                       color: Colors.red,
                                       fontStyle: FontStyle.italic),
                                 ),
@@ -430,84 +388,38 @@ class _ImageScannerState extends State<ImageScanner> {
                         ),
                       );
                     },
-                    child: Stack(
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                          height: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Color.fromARGB(255, 240, 239, 245),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color.fromARGB(255, 180, 180, 180),
-                                offset: Offset(6, 6),
-                                blurRadius: 10,
-                                spreadRadius: 1,
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: <Widget>[
-                              Container(
-                                width: 60,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Colors.black),
-                                child: Stack(
-                                  children: <Widget>[
-                                    Container(
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(10),
-                                        child: Image(
-                                          image: AssetImage(
-                                            instruction.imageUrl,
-                                          ),
-                                          fit: BoxFit.cover,
-                                          height: 60,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.all(8),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      width: 210,
-                                      child: Text(
-                                        instruction.name,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    // Text(
-                                    //   'Description: \n${activity.description}',
-                                    //   style: TextStyle(
-                                    //     fontSize: 12,
-                                    //     fontWeight: FontWeight.w600,
-                                    //     color: Colors.grey,
-                                    //   ),
-                                    // ),
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                    child: SingleChildScrollView(
+                      child: ListTile(
+                        leading: Image(
+                          image: AssetImage(instruction.imageUrl),
+                          fit: BoxFit.cover,
+                          width: 50,
+                          height: 50,
+                        ),
+                        title: Text(instruction.name),
+                      ),
                     ),
                   );
                 },
               ),
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
     );
+  }
+
+  void searchHerbal(String query) {
+    final suggestions = instructions.where((instruction) {
+      final herbTitle = instruction.name.toLowerCase();
+      final input = query.toLowerCase();
+
+      return herbTitle.contains(input);
+    }).toList();
+
+    setState(() => allinstruct = suggestions);
   }
 }
