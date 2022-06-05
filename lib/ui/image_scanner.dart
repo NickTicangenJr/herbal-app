@@ -63,6 +63,10 @@ class _ImageScannerState extends State<ImageScanner> {
       loading = false;
     });
   }
+  // Indiano=========
+  // var plantName=getPlantName(output);
+  //   var instruction=searchHerbal(plantName);
+  //   showDialog(builder:(ctx)=>AlertDialog(content:Text(instruction.tostring())));
 
   loadmodel() async {
     await Tflite.loadModel(
@@ -200,6 +204,7 @@ class _ImageScannerState extends State<ImageScanner> {
             SizedBox(
               height: 10,
             ),
+
             Stack(
               // child: Column(
               children: <Widget>[
@@ -278,7 +283,7 @@ class _ImageScannerState extends State<ImageScanner> {
                                   fontSize: 18,
                                   color: Color.fromARGB(255, 92, 92, 92),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           decoration: BoxDecoration(

@@ -456,7 +456,7 @@ List<Instruction> instructions = [
         'Before using herbal remedies, consult first your doctor. It can cause mild to moderate side effects including allergic reactions, rashes, asthma, headaches, nausea, vomiting, and diarrhea.',
   ),
   Instruction(
-    imageUrl: 'assets/herbs/tanglad.jpg',
+    imageUrl: 'assets/herbs/tanglad.png',
     name: 'Tanglad',
     usage:
         'Commonly used as a stuffing ingredient in pig spit-roasting to improve the flavor and decrease the grease-taste. Used for cooking stale fish to improve the taste. For diarrhea, decoction of leaves with sugar and a small piece of crushed ginger taken orally. For adults, 1 cup, 3 times daily taken after each loose bowel movement. For infants and babies, 1 tablespoon 3 times daily and after each loose bowel movement; 2-6 years, 1/4 cup 3 times daily and after each loose bowel movement; 7-12 years, 1/2 cup three times daily and after each loose bowel movement. One of the 10 herbal ingredients in the decoction-bath used in the post-partum ritual of suob',
