@@ -18,7 +18,7 @@ class Instruction {
 List<Instruction> instructions = [
   Instruction(
     imageUrl: 'assets/images/aloe_vera.jpg',
-    name: 'Aloe vera',
+    name: 'Aloe Vera/Sabila',
     usage:
         "Aloe vera, like a splash of oil, is a fantastic remedy for burns. It's also utilized as a wound healer, a hair grower, and a skin smoother. Take the pulp from the leaf and apply it on your skin. Apply the pulp to your scalp and face, as well. The leaf's decoction may also be used to treat wounds.",
     limitation:
@@ -28,7 +28,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/images/abukado.png',
-    name: 'Abukado',
+    name: 'Avocado/Abukado',
     usage:
         'Some of the oils in avocado are used to cure osteoarthritis. Dysentery and diarrhea are treated using the seeds, leaves, and bark. Psoriasis is a skin ailment that is treated with avocado oil and vitamin B12. The flesh of the fruit is applied to the skin to increase hair growth and hasten wound healing.',
     limitation:
@@ -38,7 +38,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/alagaw.jpg',
-    name: 'Alagaw',
+    name: 'Premna Odorata/Alagaw',
     usage:
         'Decoction of roots, leaves, flowers, and fruits used as sudorific, pectoral, and carminative. Decoction of shoots used as parasiticide. Decoction of leaves used for bathing infants; also used as treatment for beriberi. Extract of leaves for cleaning wounds and for ticks and fleas.',
     limitation: 'Use with caution as it may cause skin allergies.',
@@ -47,7 +47,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/amarillo.jpg',
-    name: 'Amarillo',
+    name: 'Marigold/Amarilyo',
     usage:
         'Flower are utilized in refreshing beverages. The leaves and essential oil are used to flavor food.',
     limitation: 'take moderately it cause severe effect.',
@@ -56,7 +56,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/images/ampalaya.jpg',
-    name: 'Ampalaya',
+    name: 'Ampalaya/Bitter gourd',
     usage:
         'Ampalaya (Momordica charantia), often known as bitter melon or bitter gourd, is a kind of bitter gourd. Traditional applications in the Philippines include coughs, colds, asthma, as an emetic, especially in newborns, colic, stomach aches, diabetes, anemia, fever, malaria, ringworm, and wounds.',
     limitation:
@@ -66,7 +66,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/atis.jpg',
-    name: 'Atis',
+    name: 'Sugar Apple/Atis',
     usage:
         'You can eat the fruit ripe and makes a delicious ice cream. Salted bruised leaves used to hasten suppuration. Bark decoction is used as tonic and to stop diarrhea.',
     limitation:
@@ -76,7 +76,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/balanoy.jpg',
-    name: 'Balanoy',
+    name: 'Basil/Balanoy',
     usage:
         'As a tea, make an infusion or decoction of the plant (9-15 grams dry herb) or the tops.  Leaf juice can aid with mucous expectoration. Leaf decoction is also used to treat hiccups, nausea, and vomiting. Gas pains: Tea made from the decoction of the plant aids in the expulsion of wind from the bowels.',
     limitation:
@@ -86,7 +86,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/Balbaspusa.jpg',
-    name: 'Balbas pusa',
+    name: "Cat’s whisker/Balbasa pusa",
     usage:
         'Balbas pusa (Cat whiskers) makes tea that is good for renal inflammation, kidney stones, and dysuria.',
     limitation:
@@ -96,7 +96,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/balete.jpg',
-    name: 'Balete',
+    name: 'Rubber Tree/Balete',
     usage:
         'Balete chopped skin is an ideal treatment for skin eruptions and dermatitis. Use a cup of chopped skin in 1/2 gallon of water for 10 minutes; use the decoction to wash the affected skin twice a day. Its juice or broth can also be used to wash wounds.',
     limitation:
@@ -106,7 +106,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/balimbing.jpg',
-    name: 'Balimbing',
+    name: 'Turncoat/Balimbing',
     usage:
         'The fruit is eaten with or without salt; the juice used for seasoning. Decoction of leaves used for aphthous stomatitis and angina. Boiled flowers used to expel worms: 50 gms to a pint of boiling water; drunk in normal doses.',
     limitation:
@@ -116,7 +116,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/bawang.jpg',
-    name: 'Bawang',
+    name: 'Garlic/Bawang',
     usage:
         'Bawang (garlic)used for hypertension. Also used as diuretic, and eaten fresh or burned for coughs in children. It is also good for Arthritis, rheumatism, toothaches you crush several cloves and rub on affected areas. Crush clove applied to both temples as poultice for headache.',
     limitation:
@@ -126,7 +126,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/bayabas.jpg',
-    name: 'Bayabas',
+    name: 'Guava/Bayabas',
     usage:
         'Bayabas is traditionally used as antiseptic and antiinflammatory for skin conditions such as skin burns, scalds, scrapes, sunburn, wounds, psoriasis, eczema and others.',
     limitation: 'There is no side effetcs',
@@ -135,7 +135,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/buyo.jpg',
-    name: 'Buyo',
+    name: 'Betel Leaf/Buyo',
     usage:
         "The Buyo crushed leaves are used as antiseptic for cuts and wounds. Leaves, together with lime and betel nut, constitute the Filipino's masticatory. Its use believed to help preserve the teeth and a prophylactic against stomach complaints. Leaves greased with lard or sesame oil, used by Filipinos as carminative; applied to the abdomen of children suffering from gastric disorders. Relieves gastrointestinal disorders. Juice of leaves used as stomachic.",
     limitation:
@@ -145,7 +145,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/cacao.jpg',
-    name: 'Cacao',
+    name: 'Cacao/Kakaw',
     usage:
         "Oil or cocoa butter is an excellent emollient, used to soften and protect chapped hands and lips. It is also good for Eczema, dry skin: Roast 10-12 seeds and pound ; apply to affected areas as poultice after a warm compress.",
     limitation:
@@ -155,7 +155,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/comfrey.jpg',
-    name: 'Comfrey',
+    name: 'Comfrey/Komprey',
     usage:
         "Decoction of leaves used for a variety of illnesses: Asthma, cough, ulcers, constipation, hypertension. Poultice of fresh leaves used for sprains and fractures, inflammatory swelling, external wounds, sores, athlete's foot, burns, insect bites, and abscesses. Juice of leaves used for a variety of skin ailments and wounds healing; apply three times daily.",
     limitation:
@@ -165,7 +165,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/dalandan.jpg',
-    name: 'Dalandan',
+    name: 'Orange/Dalandan',
     usage:
         "Juice is a cooling drink, and used as food, particularly for the febrile and scorbutic. the leaves, peel, and flowers are used as stomachic and antiscorbutic. For nausea and fainting, squeeze rind near nostril for irritant inhalation.",
     limitation:
@@ -175,7 +175,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/ganoderma.jpg',
-    name: 'Ganomderma',
+    name: 'Reishi Mushroom/Ganoderma',
     usage:
         'It makes coffee called "Ganoderma Coffee." It is effective for those with diabetes and heart disease.',
     limitation:
@@ -185,7 +185,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/gumamela.jpg',
-    name: 'Gumamela',
+    name: 'Hibiscus/Gumamela',
     usage:
         'In the Philippines, flower buds, beaten to a paste, applied as poultice to boils, cancerous swellings, and mumps. Poultice of leaves and flower buds applied externally to swellings; the same mixture, with the addition of lime, hastens the maturation of tumors. Mumps, infection of the urinary tract: use dried drug materials 15 to 30 gms, boil to decoction and drink.',
     limitation: "Do not eat may cause stomach upset, gas, and constipation.",
@@ -194,7 +194,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/ipilipil.jpg',
-    name: 'Ipil-ipil',
+    name: 'Lead Tree/Ipil Ipil',
     usage:
         'In the Philippines, the traditional healers in Zamboanga del Sur, use leaves for the treatment of parasitic worms. Roasted seeds used as emollient.',
     limitation:
@@ -204,7 +204,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/kalatsusti.jpg',
-    name: 'Kalatsutsi',
+    name: 'Frangipani/Kalachuchi',
     usage:
         'Decoction of bark is used as purgative, emmenagogue, and febrifuge. Preventive for heat stroke: the material may be taken as a cooling tea.  Root-bark taken internally as a strong purgative. Root bark and fruit also used as abortifacient. Root bark used as remedy for gonorrhea and venereal sores.',
     limitation:
@@ -214,7 +214,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/kamantigui.jpg',
-    name: 'Kalatsutsi',
+    name: 'Balsam/Kamantigui',
     usage:
         'In the Philippines, pounded leaves used as poultice to dissolve whitlow. Flowers used for snake bites, lumbago, and intercostal neuralgia. For contusion, painful inflammation, joint pains, carbuncles, dysmenorrhea, lumbago, and snake bites: use dried flowers, 3 to 6 gms or seed preparation, 3 to 7 gms or the entire plant, 9 to 15 gms, boil to decoction and drink.',
     limitation:
@@ -224,7 +224,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/kamias.jpg',
-    name: 'Kamias',
+    name: 'Tree Sorrel/Kamias',
     usage:
         'Skin diseases, especially with pruritus: Reduce the leaves to a paste and apply tolerably warm to areas of affected skin. Fruit juice used as eye drops. For Cough and thrush: Infusion of flowers, 40 grams to a pint of boiling water, 4 glasses of tea daily.',
     limitation:
@@ -234,7 +234,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/kampanilya.jpg',
-    name: 'Kampanilya',
+    name: 'Yellow Bell/Kampanilya',
     usage:
         'Infusion of leaves in moderate doses is an excellent cathartic; in considerable doses, it is purgative and a violent emetic. Decoction of leaves in small doses used as antidote for poisoning. Extract of leaves used for colic and as laxative; in large doses causes diarrhea and vomiting.',
     limitation:
@@ -244,7 +244,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/karot.jpg',
-    name: 'Karot',
+    name: 'Carrot/Karot',
     usage:
         'Raw carrots eaten as mechanical anthelmintic. Root made into marmalade used as refrigerant. Poultice of carrots also used for ulcers, carbuncles, infected wounds. Seeds of the plant when ground to powder and taken as tea for colic and to increase urine flow.',
     limitation:
@@ -254,7 +254,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/katakataka.jpg',
-    name: 'Kata-kataka',
+    name: 'Cathedral Bells/Kataka taka',
     usage:
         'Leaves used as astringent, antiseptic, and counter-irritant against poisonous insect bites. Pounded fresh material is applied as a poultice for a variety of conditions: Sprains, eczema, infections, burns, carbuncle and erysipelas. For asthma, leaves of leaves places in hot water for 15 minutes, then juice squeezed out of the leaves, and drunk.',
     limitation:
@@ -264,7 +264,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/luyangdilaw.jpg',
-    name: 'Luyang dilaw',
+    name: 'Turmeric/Luyang Dilaw',
     usage:
         'Decoction of rhizome, as tea, used for fevers, dysentery, abdominal pain, flatulence, abdominal spasm, arthritis. In the Philippines, rhizomes with coconut oil used as stomachic and vulnerary.',
     limitation:
@@ -274,7 +274,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/mangostine.jpg',
-    name: 'Mangostine',
+    name: 'Mangosteen/Mangostan',
     usage:
         'Decoction of roots used for dysmenorrhea and genitourinary ailments. Decoction of leaves and bark used as febrifuge and to treat thrush and decoction of powdered rind used for external astringent application',
     limitation:
@@ -284,7 +284,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/mais.jpg',
-    name: 'Mais',
+    name: 'Corn/Mais',
     usage:
         'For those who have Diuretic: Take decoction of hairs or cobs as tea. Decoction of pith of cob as tea is used for stomach complaints. The water in which unhusked corn is boiled is a pleasant tasting remedy for urinary tract infection. For Kidney stones: Infusion of corn hair in hot water, 3x daily.',
     limitation:
@@ -294,7 +294,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/malunggay.jpg',
-    name: 'Malunggay',
+    name: 'Drumstick Tree/Malunggay',
     usage:
         'Decoction of leaves used for hiccups, asthma, gout, back pain, rheumatism, wounds and sores. Young leaves, usually boiled, used to increase the flow of breast milk.',
     limitation:
@@ -304,7 +304,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/makahiya.jpg',
-    name: 'Makahiya',
+    name: 'Mimosa Piduca/Makahiya',
     usage:
         'In the Philippines, roots used as diuretic; also used for dysentery and dysmenorrhea. Entire plant in decoction used as alterant and antiasthmatic.',
     limitation: "Causes skin irritations or inflammations.",
@@ -313,7 +313,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/methi.jpg',
-    name: 'Methi',
+    name: 'Fungreek/Methi',
     usage:
         'Its seeds can be eaten to lower blood sugar. It can also help those with dysmenorrhea.',
     limitation:
@@ -323,7 +323,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/mint.jpg',
-    name: 'Mint',
+    name: 'Mint/Yerba Buena',
     usage:
         'In the Philippines, tops and leaves are considered carminative; when bruised used as antidote to stings of poisonous insects. Used for stomach weakness and diarrhea.. For toothaches: (1) Wet a small piece of cotton with juice expressed from crushed leaves; apply this impregnated cotton bud to the tooth. (2) Boil 6 tbsp. of leaves in two glasses of water for 15 minutes; strain and cool. Divide the decoction into 2 parts and take every 3 to 4 hours.',
     limitation:
@@ -333,7 +333,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/nim.jpg',
-    name: 'Neem tree',
+    name: 'Neem Tree/Nim',
     usage:
         'Decoction of leaves used for arthritis. Edible pulp of the fruit used for hemorrhoids, intestinal worms, wounds, diabetes, and leprosy. Flower used for controlling phlegm and treatment of intestinal worms. Used for scabies and many other skin diseases. Applied directly for treatment of head lice, wounds, skin ulcers.',
     limitation: "Use moderately it cause acute toxicity.",
@@ -342,7 +342,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/niyogniyogan.jpg',
-    name: 'Niyog-niyogan',
+    name: 'Palm Leaf/Niyog niyogan',
     usage:
         'Young shoots are edible. Leaf decoction used for the treatment of hypertension, diabetes, kidney stones, and high cholesterol.',
     limitation:
@@ -352,7 +352,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/okra.jpg',
-    name: 'Okra',
+    name: 'Lady’s Finger/Okra',
     usage:
         'Used as a food ingredient. It can be eaten raw or stewed. Decoction of young fruit useful for catarrh, urinary problems.',
     limitation:
@@ -362,7 +362,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/pandaki.jpg',
-    name: 'Pandaki',
+    name: 'Banana Bush/Pandakaki',
     usage:
         'Decoction of root and bark used for a variety of stomach and intestinal ailments. The white sap of the stem is applied to thorn injuries and to hasten the surfacing of the thorn fragment.',
     limitation:
@@ -372,7 +372,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/pandan.jpg',
-    name: 'Pandaki',
+    name: 'Fragrant Screwpine/Pandan',
     usage:
         'Wound healing: Pulverized dried leaves used to facilitate wound healing. Roots used to strengthen the gums. Decoction of leaves used for Headache, arthritis, stomach spasms.',
     limitation:
@@ -382,7 +382,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/rabanus.jpg',
-    name: 'Rabanus',
+    name: 'Radish/Labanos',
     usage:
         'Used as a food ingridients. For diarrhea: boil the fresh leaves to concentrated decoction and drink. Juice of leaves increases the flow of urine and promotes bowel movements. For patients with edema, bloated belly (ascites), pale yellowish face, and oliguria: used dried root preparation with citrus rind preparation (5:1 proportion). Boil to a concentrated decoction and drink.',
     limitation:
@@ -392,7 +392,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/repolyo.jpg',
-    name: 'Repolyo',
+    name: 'Cabbage/Repolyo',
     usage:
         'Edible and prepared in many ways: stewed, steamed, sauteed, pickled, fermented, or eaten raw. Juice of red cabbage used for chronic coughs, bronchitis, asthma. Juice of white cabbage used to treat warts. Bruised leaves of the common white cabbage used for blisters. ',
     limitation:
@@ -402,7 +402,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/romero.jpg',
-    name: 'Romero',
+    name: 'Rosemary/Romero',
     usage:
         'Steam of strong decoction of herb inhaled for coughs. Vapor baths, using 30 to 40 gms of leaves in boiling, water, used for rheumatism, catarrh. Juice of leaves applied to areas of thinning hair and dandruff; also, as rosemary vinegar. For Hair wash: Steep 25 g of rosemary in 2 pints of cider vinegar for two weeks, shaking occasionally; strain. In hair washing, put 1-2 tsp in the final rinse. For dandruff, massage rosemary vinegar thoroughly into scalp, 20 mins before washing.',
     limitation: "It cause vomiting and dizziness when too much.",
@@ -411,7 +411,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/sampalok.jpg',
-    name: 'Sampalok',
+    name: 'Tamarind/Sampalok',
     usage:
         'Sweetened and candied. The seeds, surrounded by a brownish pulp, tamarindo, are made into balls from which jams, sweets and drinks are made. The pulp, malasebo, is often eaten outright, with or without salt. The pulp is also an ingredient in Indian curries and chutnies. In the Philippines, the bark, leaves, flowers, fruits, and seeds are used medicinally in the way it is used in other countries. It also used as a treat in fever: Macerate pulp or ripe fruit in water, sweeten to taste, and drink.',
     limitation: "It causes stomach ache when eat too much.",
@@ -420,7 +420,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/sili.jpg',
-    name: 'Sili',
+    name: 'Pepper/Sili',
     usage:
         'Paste of the pepper is used a rubefacient. Infusion with cinnamon and sugar used for delirium tremens. Capsaicum, in equal parts with rhubarb and ginger, for gout and rheumatism.',
     limitation: "Eating too much cause Hemorrhoids.",
@@ -429,7 +429,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/talong.jpg',
-    name: 'Talong',
+    name: 'Eggplant/Talong',
     usage:
         'Fruit is an excellent vegetable and popular in the rural day-to-day cuisine. It is eaten before it ripens, preferred before the seed hardens. Decoction of roots taken internally for asthma and as a general stimulant. Long fruit is phlegmatic and generative of phthisis, coughs, and anorexia.',
     limitation: "It causes allergy when eat too much.",
@@ -438,7 +438,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/takipkuhol.jpg',
-    name: 'Takip kuhol',
+    name: 'Pennyworth/Takip kuhol',
     usage:
         'In the Philippines, sap of leaves used as curative for sclerotic wounds. The sap of the leaves is used on wounds and skin sores. Also, on chaps, scratches and superficial burns. Leaves are toasted and given as infusion in bowel complaints and fevers of children. Also applied as anti-inflammatory to areas of blows and bruises.',
     limitation: "It causes liver problems.",
@@ -457,7 +457,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/tanglad.png',
-    name: 'Tanglad',
+    name: 'Lemmongrass/Tanglad',
     usage:
         'Commonly used as a stuffing ingredient in pig spit-roasting to improve the flavor and decrease the grease-taste. Used for cooking stale fish to improve the taste. For diarrhea, decoction of leaves with sugar and a small piece of crushed ginger taken orally. For adults, 1 cup, 3 times daily taken after each loose bowel movement. For infants and babies, 1 tablespoon 3 times daily and after each loose bowel movement; 2-6 years, 1/4 cup 3 times daily and after each loose bowel movement; 7-12 years, 1/2 cup three times daily and after each loose bowel movement. One of the 10 herbal ingredients in the decoction-bath used in the post-partum ritual of suob',
     limitation:
@@ -467,7 +467,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/tawatawa.jpg',
-    name: 'Tawa-tawa',
+    name: 'Asthma Plant/Tawa–tawa',
     usage:
         'In the Philippines, leaves are mixed with Datura metel leaves and flowers in the preparation of "asthma-cigarettes."  Effective medicine for dengue. Just stew it and drink the juice. Tincture is used as anthelmintic. Also used for ringworm.',
     limitation: "It might cause side effects such as nausea and vomiting.",
@@ -476,7 +476,7 @@ List<Instruction> instructions = [
   ),
   Instruction(
     imageUrl: 'assets/herbs/tsaanggubat.jpg',
-    name: 'Tsaang gubat',
+    name: 'TForest Tea/Tsaang gubat',
     usage:
         'Leaf decoction or infusion for abdominal colic, cough, diarrhea and dysentery. For diarrhea: Boil 8 tbsp of chopped leaves in 2 glasses of water for 15 minutes; strain and cool. Use 1/4 of the decoction every 2 or 3 hours.',
     limitation: "Do not use while taking medications.",

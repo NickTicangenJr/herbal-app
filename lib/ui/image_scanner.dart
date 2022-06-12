@@ -1,4 +1,5 @@
 // import 'dart:ffi';
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:bottom_nav_ui/models/herb_data_model.dart';
@@ -58,9 +59,12 @@ class _ImageScannerState extends State<ImageScanner> {
 
     setState(() {
       output = prediction;
-      // label = (output![0]['label']).toString().substring(2);
+      
+      String result = (output![0]['label']).toString().substring(2);
       // use = medecine[label];
       loading = false;
+
+      setHerbal(result);
     });
   }
   // Indiano=========
@@ -341,57 +345,8 @@ class _ImageScannerState extends State<ImageScanner> {
                 itemBuilder: (context, index) {
                   final instruction = allinstruct[index];
                   return GestureDetector(
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (builder) => AlertDialog(
-                          title: Text(
-                            '${instruction.name}',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 30),
-                          ),
-                          content: SingleChildScrollView(
-                            child: Column(
-                              children: [
-                                Image(
-                                  image: AssetImage('${instruction.imageUrl}'),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'How to Use:\n  ${instruction.usage}\n\nLimitations:\n  ${instruction.limitation}',
-                                  style: TextStyle(fontSize: 18),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                // Text(
-                                //   'Limitations: \n${instruction.limitation}',
-                                //   textAlign: TextAlign.left,
-                                //   style: TextStyle(fontSize: 18),
-                                // ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  'Disclaimer: \n${instruction.warning}',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      color: Colors.red,
-                                      fontStyle: FontStyle.italic),
-                                ),
-                              ],
-                            ),
-                          ),
-                          actions: [
-                            TextButton(
-                              onPressed: () => Navigator.pop(context),
-                              child: Text('I understand'),
-                            ),
-                          ],
-                        ),
-                      );
+                    onTap: () async {
+                      callDialog(instruction);
                     },
                     child: SingleChildScrollView(
                       child: ListTile(
@@ -426,5 +381,66 @@ class _ImageScannerState extends State<ImageScanner> {
     }).toList();
 
     setState(() => allinstruct = suggestions);
+  }
+
+  Future setHerbal(String name) {
+    final herbal = instructions.firstWhere((x) {
+      final herbTitle = x.name.toLowerCase();
+      final input = name.toLowerCase();
+      return herbTitle.contains(input);
+    });
+    return callDialog(herbal);
+  }
+
+  Future callDialog(Instruction instruction) {
+    return showDialog(
+      context: context,
+      builder: (builder) => AlertDialog(
+        title: Text(
+          '${instruction.name}',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage('${instruction.imageUrl}'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'How to Use:\n  ${instruction.usage}\n\nLimitations:\n  ${instruction.limitation}',
+                style: TextStyle(fontSize: 18),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              // Text(
+              //   'Limitations: \n${instruction.limitation}',
+              //   textAlign: TextAlign.left,
+              //   style: TextStyle(fontSize: 18),
+              // ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Disclaimer: \n${instruction.warning}',
+                style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.red,
+                    fontStyle: FontStyle.italic),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('I understand'),
+          ),
+        ],
+      ),
+    );
   }
 }

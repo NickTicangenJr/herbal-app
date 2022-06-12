@@ -1,13 +1,13 @@
 0 Avocado/Abukado
-1 Premna Odorata/ Alagaw
-2 Aloe Vera/ Sabila
+1 Premna Odorata/Alagaw
+2 Aloe Vera/Sabila
 3 Marigold/Amarilyo
 4 Ampalaya/Bitter gourd
 5 Sugar Apple/Atis
 6 Basil/Balanoy
 7 Cat’s whisker/Balbasa pusa
 8 Rubber Tree/Balete
-9 Starfruil or Turncoat/Balimbing
+9 Turncoat/Balimbing
 10 Garlic/Bawang
 11 Guava/Bayabas
 12 Betel Leaf/Buyo
